@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Okey İstanbul</title>
+<meta name="description" content="Okey İstanbul: Boğaz manzaralı masalarda, ücretsiz okey. Yakında iPhone ve Android için App Store ve Google Play'de.">
+<meta property="og:title" content="Okey İstanbul">
+<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Boğaz manzaralı masalarda ücretsiz okey.">
+<meta property="og:image" content="https://okeyistanbul.com/img/hero.webp">
+<meta property="og:url" content="https://okeyistanbul.com/">
+<meta name="theme-color" content="#4a0a16">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+/* Düzen: tam genişlik sahne fotoğrafı + marka; altında oyundan üç kare, kurallar şeridi, iletişim. Tek tema: gece bordosu */
+:root{
+  --ink:#1c070c; --bordo:#4a0a16; --bordo2:#6e1426; --gold:#e2b862; --gold-hi:#f7dfa3;
+  --cream:#f6ead6; --muted:#c7a998; --line:rgba(226,184,98,.28);
+  --display:'Cinzel',Georgia,'Times New Roman',serif;
+  --body:'Rubik',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--cream);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.wrap{max-width:68rem;margin-inline:auto;padding-inline:16px}
+
+/* üst şerit */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:1rem}
+.mark{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--gold-hi);font:700 1rem var(--display);letter-spacing:.12em}
+.mark img{width:40px;height:40px}
+.top nav{display:flex;gap:1.2rem;font-size:.9rem}
+.top nav a{color:var(--cream);text-decoration:none;opacity:.85}
+.top nav a:hover{opacity:1;color:var(--gold-hi)}
+
+/* sahne */
+.hero{position:relative;min-height:min(92vh,48rem);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(28,7,12,.55) 0%,rgba(28,7,12,0) 22%,rgba(28,7,12,0) 40%,rgba(28,7,12,.86) 74%,var(--ink) 100%),
+  linear-gradient(90deg,rgba(28,7,12,.72) 0%,rgba(28,7,12,.35) 38%,rgba(28,7,12,0) 62%)}
+.hero .wrap{padding-block:0 3.2rem;width:100%}
+.brand{font:700 clamp(2.6rem,9vw,5.6rem)/.95 var(--display);letter-spacing:.06em;margin:0;text-wrap:balance;
+  background:linear-gradient(180deg,#fff3c4 0%,#e9bf4f 55%,#a8741a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 rgba(60,12,20,.9)) drop-shadow(0 10px 24px rgba(0,0,0,.6))}
+.brand span{display:block;font-size:.62em;letter-spacing:.32em;margin-top:.15em}
+.slogan{font:700 clamp(.85rem,2.4vw,1.1rem) var(--display);letter-spacing:.18em;color:var(--cream);margin:.9rem 0 0;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.lede{max-width:36rem;margin:1.1rem 0 0;color:#ecdccb;font-size:1.05rem;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.soon{display:inline-flex;align-items:center;gap:.7rem;margin:1.6rem 0 0;padding:.7rem 1.2rem;border-radius:99px;background:rgba(20,6,9,.72);border:1px solid var(--line);font-weight:500;letter-spacing:.02em;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.soon .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(226,184,98,.18)}
+.stores{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.store{display:flex;align-items:center;gap:.7rem;padding:.65rem 1.1rem .65rem .9rem;border-radius:.8rem;background:rgba(20,6,9,.78);border:1px solid var(--line);color:var(--cream);text-decoration:none;min-width:12rem}
+.store svg{width:26px;height:26px;flex:none;fill:var(--cream)}
+.store small{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.store b{display:block;font-weight:600;font-size:1.02rem;line-height:1.2}
+
+/* oyundan kareler */
+section{padding-block:4.5rem 0}
+.eyebrow{font:600 .76rem var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .6rem}
+h2{font:700 clamp(1.6rem,4vw,2.3rem)/1.15 var(--display);margin:0;color:var(--gold-hi);text-wrap:balance;letter-spacing:.02em}
+.intro{max-width:40rem;color:var(--muted);margin:.8rem 0 0}
+.shots{display:grid;grid-template-columns:repeat(12,1fr);gap:1.1rem;margin-top:2.2rem}
+.shot{margin:0;min-width:0}
+.shot img{border-radius:.9rem;border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45);aspect-ratio:16/9;object-fit:cover;width:100%}
+.shot figcaption{margin-top:.7rem;font-size:.95rem;color:var(--muted)}
+.shot figcaption b{display:block;color:var(--cream);font-weight:600;font-size:1.02rem}
+.s1,.s2{grid-column:span 6}.s3{grid-column:1 / -1;margin-top:1.4rem}
+@media (min-width:52rem){
+  .s3{display:grid;grid-template-columns:2fr 1fr;gap:2rem;align-items:center}
+  .s3 figcaption{margin:0;font-size:1rem}
+  .s3 figcaption b{font:700 1.5rem/1.2 var(--display);color:var(--gold-hi);margin-bottom:.6rem;letter-spacing:.02em}
+}
+@media (max-width:46rem){.s1,.s2{grid-column:span 12}}
+
+/* özellikler */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:0;margin-top:2rem;border-top:1px solid var(--line)}
+.feat{padding:1.3rem 1.2rem 1.4rem 0;border-bottom:1px solid var(--line);min-width:0}
+.feat h3{margin:0 0 .35rem;font:600 1.05rem var(--body);color:var(--cream)}
+.feat p{margin:0;color:var(--muted);font-size:.95rem}
+.feat .num{font:700 .9rem var(--display);color:var(--gold);display:block;margin-bottom:.4rem;letter-spacing:.08em}
+
+
+/* iletişim */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.4rem;margin-top:2rem}
+.card{border:1px solid var(--line);border-radius:.9rem;padding:1.2rem 1.3rem;background:rgba(74,10,22,.35);min-width:0}
+.card small{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card p{margin:.4rem 0 0}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:.4rem}
+.mail code{font:500 1.05rem var(--body);color:var(--cream);user-select:all;word-break:break-all}
+.copy{font:600 .8rem var(--body);background:transparent;color:var(--gold);border:1px solid var(--line);border-radius:99px;padding:.3rem .8rem;cursor:pointer}
+.copy:hover{background:rgba(226,184,98,.12)}
+
+footer{margin-top:4.5rem;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;padding-block:1.6rem 2.2rem;font-size:.88rem;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:1.2rem}
+footer a{color:var(--cream);text-decoration:none}
+footer a:hover{color:var(--gold-hi)}
+@media (max-width:30rem){.top nav{display:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero .wrap>*:nth-child(2){animation-delay:.08s}.hero .wrap>*:nth-child(3){animation-delay:.16s}.hero .wrap>*:nth-child(4){animation-delay:.24s}
+  @keyframes rise{from{transform:translateY(14px)}}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/"><img src="/img/cip.png" alt="" width="40" height="40">OKEY İSTANBUL</a>
+    <nav aria-label="Ana menü"><a href="#oyun">Oyun</a><a href="#iletisim">İletişim</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <img src="/img/hero.webp" alt="Boğaz kıyısında bir masada okey oynayan üç arkadaş; arkada vapur, Ayasofya ve Galata Kulesi" width="1600" height="900" fetchpriority="high">
+    <div class="wrap">
+      <h1 class="brand">OKEY<span>İSTANBUL</span></h1>
+      <p class="slogan">OKEYİN KALBİ İSTANBUL'DA ATAR!</p>
+      <p class="lede">Boğaz manzaralı masalarda ücretsiz okey. Çay söyle, taşlarını diz, eli bitir.</p>
+      <p class="soon"><span class="dot" aria-hidden="true"></span>Yakında iPhone ve Android'de</p>
+    </div>
+  </div>
+
+  <section id="oyun">
+    <div class="wrap">
+      <p class="eyebrow">Oyun</p>
+      <h2>Bildiğin okey, İstanbul'un en güzel masalarında</h2>
+      <p class="intro">Meydan'dan Saray'a on salon, her salonda farklı masa ücretleri. Gösterge, çifte gitme, okey atarak bitirme ve çanak kırma: kurallar mahalle kahvesindeki gibi.</p>
+      <div class="shots">
+        <figure class="shot s1"><img src="/img/masa.webp" alt="Oyun masası: ıstakada dizili taşlar, ortada deste ve gösterge, çevrede dört oyuncu" width="1600" height="900" loading="lazy">
+          <figcaption><b>Boğaz kıyısında dört kişilik masa</b>Sırası gelen titreşimle haber alır; okey ıstakaya ters gelir, çift dokununca açılır.</figcaption></figure>
+        <figure class="shot s2"><img src="/img/lobi.webp" alt="Salon seçim ekranı: Kahvehane, Çarşı, Han, Kule ve Köşk salonları, giriş ve masa ücretleriyle" width="1600" height="900" loading="lazy">
+          <figcaption><b>Kahvehaneden saraya on salon</b>Bütçene göre salonunu seç; masada kimin oturduğunu ve çanağı görerek otur.</figcaption></figure>
+        <figure class="shot s3"><img src="/img/hunkar.webp" alt="Hünkâr salonu: saray odasında ipek örtülü masa, sedef kakmalı ıstakalar ve altın çerçeveli taşlar" width="1600" height="900" loading="lazy">
+          <figcaption><b>Hünkâr salonu</b>İpek örtü, sedef kakmalı abanoz ıstakalar ve altın çerçeveli taşlarla saray masası.</figcaption></figure>
+      </div>
+
+      <div class="feats">
+        <div class="feat"><span class="num">101 · 106 TAŞ</span><h3>Gerçek okey kuralları</h3><p>Gösterge, okey ve sahte okey, 12-13-1 serisi, çifte gitme, okey atarak bitirme.</p></div>
+        <div class="feat"><span class="num">TEK'E TEK · 4 KİŞİ</span><h3>İki masa düzeni</h3><p>İster dört kişilik klasik masa, ister tek'e tek hızlı eller.</p></div>
+        <div class="feat"><span class="num">ÇAY · SİMİT · KÜNEFE</span><h3>Masaya ikram et</h3><p>Rakibine çay ısmarla, kazanana lale gönder; hediyeler masadan kalkana kadar durur.</p></div>
+        <div class="feat"><span class="num">60 SANİYE</span><h3>Bağlantın kopsa da yerin hazır</h3><p>İnternetin giderse 60 saniye içinde aynı masaya, aynı taşlarla dönersin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <div class="wrap">
+      <p class="eyebrow">İletişim</p>
+      <h2>Bize yazın</h2>
+      <div class="contact">
+        <div class="card">
+          <small>Destek ve öneriler</small>
+          <div class="mail"><code id="mail">admin@okeyistanbul.com</code><button class="copy" type="button" id="copy">Kopyala</button></div>
+          <p style="color:var(--muted);font-size:.92rem">Oyundaki bir hatayı veya açığı fark ederseniz kullanmadan bize bildirin.</p>
+        </div>
+        <div class="card">
+          <small>Geliştirici</small>
+          <p>Nuri Murat Dereli<br><span style="color:var(--muted)">Kuşadası, Aydın · Türkiye</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Okey İstanbul</span>
+    <nav aria-label="Yasal"><a href="/gizlilik/">Gizlilik Politikası</a><a href="/sartlar/">Kullanım Şartları</a><a href="/gizlilik/#en">Privacy Policy</a><a href="/sartlar/#en">Terms of Use</a></nav>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('mail').textContent;
+  function ok(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent='Kopyala'},1800)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}
+});
+</script>
+</body>
+</html>
