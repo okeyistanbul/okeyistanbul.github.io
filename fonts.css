@@ -4,7 +4,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(/fonts/cinzel-latin-ext-700-normal.woff2) format('woff2');
+  src: url(/cinzel-latin-ext-700-normal.woff2) format('woff2');
 }
 /* cinzel-latin-700-normal */
 @font-face {
@@ -12,7 +12,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(/fonts/cinzel-latin-700-normal.woff2) format('woff2');
+  src: url(/cinzel-latin-700-normal.woff2) format('woff2');
 }
 /* rubik-latin-ext-400-normal */
 @font-face {
@@ -20,7 +20,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(/fonts/rubik-latin-ext-400-normal.woff2) format('woff2');
+  src: url(/rubik-latin-ext-400-normal.woff2) format('woff2');
 }
 /* rubik-latin-400-normal */
 @font-face {
@@ -28,7 +28,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(/fonts/rubik-latin-400-normal.woff2) format('woff2');
+  src: url(/rubik-latin-400-normal.woff2) format('woff2');
 }
 /* rubik-latin-ext-500-normal */
 @font-face {
@@ -36,7 +36,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url(/fonts/rubik-latin-ext-500-normal.woff2) format('woff2');
+  src: url(/rubik-latin-ext-500-normal.woff2) format('woff2');
 }
 /* rubik-latin-500-normal */
 @font-face {
@@ -44,7 +44,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url(/fonts/rubik-latin-500-normal.woff2) format('woff2');
+  src: url(/rubik-latin-500-normal.woff2) format('woff2');
 }
 /* rubik-latin-ext-600-normal */
 @font-face {
@@ -52,7 +52,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: url(/fonts/rubik-latin-ext-600-normal.woff2) format('woff2');
+  src: url(/rubik-latin-ext-600-normal.woff2) format('woff2');
 }
 /* rubik-latin-600-normal */
 @font-face {
@@ -60,5 +60,5 @@
   font-style: normal;
   font-display: swap;
   font-weight: 600;
-  src: url(/fonts/rubik-latin-600-normal.woff2) format('woff2');
+  src: url(/rubik-latin-600-normal.woff2) format('woff2');
 }
