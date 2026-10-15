@@ -4,110 +4,200 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Okey İstanbul</title>
-<meta name="description" content="Okey İstanbul: Boğaz manzaralı masalarda, ücretsiz okey. Yakında iPhone ve Android için App Store ve Google Play'de.">
+<meta name="description" content="Okey İstanbul: Boğaz kıyısında, köy kahvesinde ve Hünkâr sarayında gerçek oyuncularla ücretsiz okey. Yeni dostlar edin, arkadaşlarını masana çağır, her ay kupaları topla.">
 <meta property="og:title" content="Okey İstanbul">
-<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Boğaz manzaralı masalarda ücretsiz okey.">
-<meta property="og:image" content="https://okeyistanbul.com/hero.webp">
+<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Gerçek oyuncularla ücretsiz okey, yeni dostlar ve aylık kupa yarışı.">
+<meta property="og:image" content="https://okeyistanbul.com/img/og.jpg">
 <meta property="og:url" content="https://okeyistanbul.com/">
-<meta name="theme-color" content="#4a0a16">
+<meta name="theme-color" content="#170609">
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css">
 <style>
-/* Düzen: tam genişlik sahne fotoğrafı + marka; altında oyundan üç kare, kurallar şeridi, iletişim. Tek tema: gece bordosu */
+/* Düzen: gece bordosu bir İstanbul akşamı. Tam genişlik sahne, sonra her bölüm bir oyun ekranıyla eşleşen iki sütun; tek cesur öğe: kupa dolabı */
 :root{
-  --ink:#1c070c; --bordo:#4a0a16; --bordo2:#6e1426; --gold:#e2b862; --gold-hi:#f7dfa3;
-  --cream:#f6ead6; --muted:#c7a998; --line:rgba(226,184,98,.28);
+  --night:#170609; --night2:#22090f; --bordo:#5a0f1e; --bordo2:#7d1a2c;
+  --gold:#e2b862; --gold-hi:#f7dfa3; --cream:#f6ead6; --muted:#c9ab9a;
+  --felt:#1d6b51; --line:rgba(226,184,98,.24);
   --display:'Cinzel',Georgia,'Times New Roman',serif;
   --body:'Rubik',system-ui,-apple-system,'Segoe UI',sans-serif;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--ink);color:var(--cream);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--cream);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--gold)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
-.wrap{max-width:68rem;margin-inline:auto;padding-inline:16px}
+.wrap{max-width:72rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 
 /* üst şerit */
-.top{position:absolute;inset:0 0 auto 0;z-index:3;padding-top:env(safe-area-inset-top,0px)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:1rem}
-.mark{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--gold-hi);font:700 1rem var(--display);letter-spacing:.12em}
+.top{position:absolute;inset:0 0 auto 0;z-index:5;padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1rem}
+.mark{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--gold-hi);font:700 1rem var(--display);letter-spacing:.12em;white-space:nowrap}
 .mark img{width:40px;height:40px}
-.top nav{display:flex;gap:1.2rem;font-size:.9rem}
-.top nav a{color:var(--cream);text-decoration:none;opacity:.85}
+.top nav{display:flex;gap:1.3rem;font-size:.92rem}
+.top nav a{color:var(--cream);text-decoration:none;opacity:.85;text-shadow:0 1px 6px rgba(0,0,0,.7)}
 .top nav a:hover{opacity:1;color:var(--gold-hi)}
 
 /* sahne */
-.hero{position:relative;min-height:min(92vh,48rem);display:grid;align-items:end;overflow:hidden;isolation:isolate}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2}
+.hero{position:relative;min-height:clamp(34rem,88vh,52rem);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(180deg,rgba(28,7,12,.55) 0%,rgba(28,7,12,0) 22%,rgba(28,7,12,0) 40%,rgba(28,7,12,.86) 74%,var(--ink) 100%),
-  linear-gradient(90deg,rgba(28,7,12,.72) 0%,rgba(28,7,12,.35) 38%,rgba(28,7,12,0) 62%)}
-.hero .wrap{padding-block:0 3.2rem;width:100%}
-.brand{font:700 clamp(2.6rem,9vw,5.6rem)/.95 var(--display);letter-spacing:.06em;margin:0;text-wrap:balance;
+  linear-gradient(180deg,rgba(23,6,9,.6) 0%,rgba(23,6,9,0) 20%,rgba(23,6,9,0) 42%,rgba(23,6,9,.88) 76%,var(--night) 100%),
+  linear-gradient(90deg,rgba(23,6,9,.78) 0%,rgba(23,6,9,.35) 40%,rgba(23,6,9,0) 64%)}
+.hero .wrap{padding-block:7rem 2.4rem;width:100%}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font:500 .8rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin:0 0 1rem}
+.kicker i{width:.5rem;height:.5rem;border-radius:50%;background:#58d39a;box-shadow:0 0 0 4px rgba(88,211,154,.2)}
+.brand{font:700 clamp(2.8rem,9.5vw,6rem)/.92 var(--display);letter-spacing:.06em;margin:0;
   background:linear-gradient(180deg,#fff3c4 0%,#e9bf4f 55%,#a8741a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 3px 0 rgba(60,12,20,.9)) drop-shadow(0 10px 24px rgba(0,0,0,.6))}
-.brand span{display:block;font-size:.62em;letter-spacing:.32em;margin-top:.15em}
-.slogan{font:700 clamp(.85rem,2.4vw,1.1rem) var(--display);letter-spacing:.18em;color:var(--cream);margin:.9rem 0 0;text-shadow:0 2px 8px rgba(0,0,0,.8)}
-.lede{max-width:36rem;margin:1.1rem 0 0;color:#ecdccb;font-size:1.05rem;text-shadow:0 1px 6px rgba(0,0,0,.8)}
-.soon{display:inline-flex;align-items:center;gap:.7rem;margin:1.6rem 0 0;padding:.7rem 1.2rem;border-radius:99px;background:rgba(20,6,9,.72);border:1px solid var(--line);font-weight:500;letter-spacing:.02em;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
-.soon .dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(226,184,98,.18)}
+.brand span{display:block;font-size:.6em;letter-spacing:.32em;margin-top:.12em}
+.slogan{font:700 clamp(.85rem,2.4vw,1.1rem) var(--display);letter-spacing:.18em;margin:1rem 0 0;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.lede{max-width:34rem;margin:1rem 0 0;color:#efe0cf;font-size:1.08rem;text-shadow:0 1px 6px rgba(0,0,0,.85)}
 .stores{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
-.store{display:flex;align-items:center;gap:.7rem;padding:.65rem 1.1rem .65rem .9rem;border-radius:.8rem;background:rgba(20,6,9,.78);border:1px solid var(--line);color:var(--cream);text-decoration:none;min-width:12rem}
+.store{display:flex;align-items:center;gap:.7rem;padding:.65rem 1.1rem .65rem .9rem;border-radius:.85rem;background:rgba(18,5,8,.8);border:1px solid var(--line);min-width:12.5rem;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .store svg{width:26px;height:26px;flex:none;fill:var(--cream)}
-.store small{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.store small{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
 .store b{display:block;font-weight:600;font-size:1.02rem;line-height:1.2}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;margin:2.4rem 0 0;padding:1.1rem 0 0;border-top:1px solid var(--line);list-style:none}
+.facts li{display:flex;align-items:baseline;gap:.5rem;color:var(--muted);font-size:.92rem}
+.facts b{font:700 1.5rem var(--display);color:var(--gold-hi);font-variant-numeric:tabular-nums}
 
-/* oyundan kareler */
-section{padding-block:4.5rem 0}
-.eyebrow{font:600 .76rem var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .6rem}
-h2{font:700 clamp(1.6rem,4vw,2.3rem)/1.15 var(--display);margin:0;color:var(--gold-hi);text-wrap:balance;letter-spacing:.02em}
-.intro{max-width:40rem;color:var(--muted);margin:.8rem 0 0}
-.shots{display:grid;grid-template-columns:repeat(12,1fr);gap:1.1rem;margin-top:2.2rem}
-.shot{margin:0;min-width:0}
-.shot img{border-radius:.9rem;border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45);aspect-ratio:16/9;object-fit:cover;width:100%}
-.shot figcaption{margin-top:.7rem;font-size:.95rem;color:var(--muted)}
-.shot figcaption b{display:block;color:var(--cream);font-weight:600;font-size:1.02rem}
-.s1,.s2{grid-column:span 6}.s3{grid-column:1 / -1;margin-top:1.4rem}
-@media (min-width:52rem){
-  .s3{display:grid;grid-template-columns:2fr 1fr;gap:2rem;align-items:center}
-  .s3 figcaption{margin:0;font-size:1rem}
-  .s3 figcaption b{font:700 1.5rem/1.2 var(--display);color:var(--gold-hi);margin-bottom:.6rem;letter-spacing:.02em}
-}
-@media (max-width:46rem){.s1,.s2{grid-column:span 12}}
+/* bölümler */
+section{padding-block:5.5rem 0}
+.eyebrow{font:600 .76rem var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .7rem}
+h2{font:700 clamp(1.7rem,4.2vw,2.6rem)/1.12 var(--display);margin:0;color:var(--gold-hi);text-wrap:balance;letter-spacing:.02em}
+h3{text-wrap:balance}
+.intro{max-width:36rem;color:var(--muted);margin:1rem 0 0;font-size:1.04rem}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.6rem,4vw,3.5rem);align-items:center}
+.split.rev{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.split.rev>.txt{order:2}
+.split>*{min-width:0}
 
-/* özellikler */
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:0;margin-top:2rem;border-top:1px solid var(--line)}
-.feat{padding:1.3rem 1.2rem 1.4rem 0;border-bottom:1px solid var(--line);min-width:0}
-.feat h3{margin:0 0 .35rem;font:600 1.05rem var(--body);color:var(--cream)}
-.feat p{margin:0;color:var(--muted);font-size:.95rem}
-.feat .num{font:700 .9rem var(--display);color:var(--gold);display:block;margin-bottom:.4rem;letter-spacing:.08em}
+/* telefon çerçevesi (yatay) */
+.phone{position:relative;margin:0;padding:clamp(8px,1.2vw,14px);border-radius:clamp(22px,3vw,38px);background:linear-gradient(145deg,#3a1018,#120407);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 3px #08020a,0 30px 70px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.phone img{border-radius:clamp(14px,2vw,26px);aspect-ratio:16/9;object-fit:cover;width:100%}
+.phone::before{content:"";position:absolute;left:clamp(3px,.5vw,6px);top:50%;width:4px;height:14%;transform:translateY(-50%);border-radius:4px;background:#05010a}
 
+/* adımlar */
+.steps{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:1.1rem;counter-reset:s}
+.steps li{display:grid;grid-template-columns:2.6rem 1fr;gap:.9rem;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;font:700 1.05rem var(--display);color:var(--night);background:radial-gradient(circle at 35% 30%,#fff1c2,#d9a640 70%);box-shadow:0 0 0 3px rgba(226,184,98,.18)}
+.steps b{display:block;font-weight:600;font-size:1.05rem;color:var(--cream)}
+.steps span{color:var(--muted);font-size:.96rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem;padding:0;list-style:none}
+.chips li{padding:.35rem .8rem;border-radius:99px;border:1px solid var(--line);font-size:.84rem;color:var(--gold-hi);background:rgba(90,15,30,.35)}
 
-/* iletişim */
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.4rem;margin-top:2rem}
-.card{border:1px solid var(--line);border-radius:.9rem;padding:1.2rem 1.3rem;background:rgba(74,10,22,.35);min-width:0}
-.card small{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+/* masalar */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.8rem 0 1.2rem}
+.tab{font:600 .95rem var(--body);color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:99px;padding:.55rem 1.1rem;cursor:pointer}
+.tab:hover{color:var(--cream)}
+.tab[aria-selected="true"]{color:var(--night);background:linear-gradient(#f7dfa3,#d9a640);border-color:transparent}
+.stage{display:grid}
+.stage>figure{grid-area:1/1;margin:0;transition:opacity .45s ease}
+.stage>figure[hidden]{display:block!important;opacity:0;pointer-events:none;visibility:hidden}
+.stage figcaption{margin-top:1rem;display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;align-items:baseline}
+.stage figcaption b{font:700 1.25rem var(--display);color:var(--gold-hi);letter-spacing:.02em}
+.stage figcaption span{color:var(--muted)}
+.ladder{margin-top:2.6rem;display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .2rem;font-size:.9rem;color:var(--muted)}
+.ladder strong{font-weight:600;color:var(--gold);margin-right:.6rem;letter-spacing:.06em;text-transform:uppercase;font-size:.75rem}
+.ladder span{white-space:nowrap}
+.ladder span:not(:last-child)::after{content:"›";margin:0 .45rem;color:rgba(226,184,98,.5)}
+.ladder span:last-child{color:var(--gold-hi);font-weight:600}
+
+/* dostluk */
+.treats{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.6rem}
+.treats img{width:clamp(52px,7vw,72px);height:clamp(52px,7vw,72px);object-fit:contain;filter:drop-shadow(0 8px 10px rgba(0,0,0,.45))}
+.pets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:3rem}
+.pet{position:relative;margin:0;padding:1rem .8rem .9rem;border-radius:1.1rem;background:radial-gradient(120% 90% at 50% 0%,rgba(125,26,44,.75),rgba(34,9,15,.9));border:1px solid var(--line);text-align:center}
+.pet img{height:clamp(110px,14vw,170px);width:auto;margin:0 auto;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(0,0,0,.5))}
+.pet figcaption{margin-top:.6rem;font-weight:600}
+.pet figcaption small{display:block;color:var(--gold);font-weight:500;font-size:.82rem}
+.petsHead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.4rem 1rem;margin-top:3.5rem}
+.petsHead h3{margin:0;font:700 1.5rem var(--display);color:var(--gold-hi)}
+.petsHead p{margin:0;color:var(--muted)}
+
+/* davet */
+.invite{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:1rem;margin-top:1.8rem;list-style:none;padding:0}
+.invite li{padding:1.1rem 1.1rem 1.2rem;border-top:2px solid var(--gold);background:linear-gradient(180deg,rgba(90,15,30,.45),rgba(90,15,30,0));min-width:0}
+.invite small{font:700 .78rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.invite b{display:block;font:700 1.35rem var(--display);color:var(--gold-hi);margin:.3rem 0 .2rem;font-variant-numeric:tabular-nums}
+.invite span{color:var(--muted);font-size:.94rem}
+.code{display:inline-block;white-space:nowrap;font:600 1rem ui-monospace,Menlo,Consolas,monospace;letter-spacing:.08em;padding:.15rem .5rem;border-radius:.4rem;background:rgba(0,0,0,.35);color:var(--gold-hi)}
+.notes{margin:1.6rem 0 0;padding:0;list-style:none;display:grid;gap:.7rem}
+.notes li{padding-left:1.4rem;position:relative;color:#ead9c6}
+.notes li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;border-radius:2px;transform:rotate(45deg);background:var(--gold)}
+
+/* kupa dolabı */
+.cabinet{padding-block:6rem 5rem;margin-top:5.5rem;background:
+  radial-gradient(60% 50% at 50% 0%,rgba(226,184,98,.16),rgba(226,184,98,0) 70%),
+  linear-gradient(180deg,#2a0a12,#170609 85%);border-block:1px solid var(--line)}
+.cabinet section{padding:0}
+.cabHead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 2rem;align-items:end}
+.prizes{display:flex;gap:.6rem;flex-wrap:wrap}
+.prize{min-width:7.2rem;text-align:center;padding:.7rem .8rem;border-radius:.9rem;border:1px solid var(--line);background:rgba(0,0,0,.25)}
+.prize small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.prize b{display:block;font:700 1.3rem var(--display);font-variant-numeric:tabular-nums}
+.prize.g small,.prize.g b{color:#f3cf63}.prize.s small,.prize.s b{color:#dfe3ea}.prize.b small,.prize.b b{color:#e0a072}
+.cabImg{margin:2.2rem 0 0;border-radius:1.2rem;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.cabImg img{width:100%}
+.tro{width:100%;border-collapse:collapse;margin-top:2rem;font-variant-numeric:tabular-nums}
+.troWrap{overflow-x:auto}
+.tro th,.tro td{text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tro th{font:600 .74rem var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.tro td:first-child{font-weight:600;color:var(--cream);white-space:nowrap}
+.tro td{color:var(--muted)}
+.tro td.n{white-space:nowrap;color:#ead9c6}
+.cabNote{margin:1.2rem 0 0;color:var(--muted);font-size:.92rem}
+
+/* avatarlar */
+.crowd{margin-top:2rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.crowd .row{display:flex;gap:1rem;width:max-content;animation:drift 60s linear infinite}
+.crowd img{height:clamp(96px,12vw,140px);width:auto;flex:none;filter:drop-shadow(0 10px 12px rgba(0,0,0,.5))}
+@keyframes drift{to{transform:translateX(-50%)}}
+
+/* son çağrı + iletişim */
+.final{margin-top:5.5rem;position:relative;overflow:hidden;isolation:isolate;border-block:1px solid var(--line)}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:-2;opacity:.6}
+.final::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--night) 10%,rgba(23,6,9,.7) 55%,rgba(23,6,9,.35))}
+.final .wrap{padding-block:4.5rem}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.2rem;margin-top:2rem;max-width:44rem}
+.card{border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.2rem;background:rgba(23,6,9,.72);min-width:0}
+.card small{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .card p{margin:.4rem 0 0}
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:.4rem}
 .mail code{font:500 1.05rem var(--body);color:var(--cream);user-select:all;word-break:break-all}
 .copy{font:600 .8rem var(--body);background:transparent;color:var(--gold);border:1px solid var(--line);border-radius:99px;padding:.3rem .8rem;cursor:pointer}
 .copy:hover{background:rgba(226,184,98,.12)}
 
-footer{margin-top:4.5rem;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;padding-block:1.6rem 2.2rem;font-size:.88rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;padding-block:1.8rem calc(2.2rem + env(safe-area-inset-bottom,0px));font-size:.88rem;color:var(--muted)}
 footer nav{display:flex;flex-wrap:wrap;gap:1.2rem}
 footer a{color:var(--cream);text-decoration:none}
 footer a:hover{color:var(--gold-hi)}
-@media (max-width:30rem){.top nav{display:none}}
-@media (prefers-reduced-motion:no-preference){
-  .hero .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-  .hero .wrap>*:nth-child(2){animation-delay:.08s}.hero .wrap>*:nth-child(3){animation-delay:.16s}.hero .wrap>*:nth-child(4){animation-delay:.24s}
-  @keyframes rise{from{transform:translateY(14px)}}
+footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
+
+@media (max-width:56rem){
+  .split,.split.rev{grid-template-columns:1fr}
+  .split.rev>.txt{order:0}
+  .cabHead{grid-template-columns:1fr}
+  .pets{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .top nav{display:none}
 }
+@media (prefers-reduced-motion:no-preference){
+  .hero>img{animation:slowzoom 26s ease-out both}
+  @keyframes slowzoom{from{transform:scale(1.08)}}
+  .hero .wrap>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero .wrap>*:nth-child(2){animation-delay:.06s}.hero .wrap>*:nth-child(3){animation-delay:.12s}.hero .wrap>*:nth-child(4){animation-delay:.18s}.hero .wrap>*:nth-child(5){animation-delay:.24s}.hero .wrap>*:nth-child(6){animation-delay:.3s}
+  @keyframes rise{from{transform:translateY(14px)}}
+  .treats img{animation:bob 4.5s ease-in-out infinite}
+  .treats img:nth-child(2n){animation-delay:-1.4s}.treats img:nth-child(3n){animation-delay:-2.6s}
+  @keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
+}
+@media (prefers-reduced-motion:reduce){.crowd .row{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -115,77 +205,217 @@ footer a:hover{color:var(--gold-hi)}
 <header class="top">
   <div class="wrap">
     <a class="mark" href="/"><img src="/cip.png" alt="" width="40" height="40">OKEY İSTANBUL</a>
-    <nav aria-label="Ana menü"><a href="#oyun">Oyun</a><a href="#iletisim">İletişim</a></nav>
+    <nav aria-label="Ana menü"><a href="#oyun">Oyun</a><a href="#masalar">Masalar</a><a href="#dostluk">Dostluk</a><a href="#kupalar">Kupalar</a><a href="#iletisim">İletişim</a></nav>
   </div>
 </header>
 
 <main>
   <div class="hero">
-    <img src="/hero.webp" alt="Boğaz kıyısında bir masada okey oynayan üç arkadaş; arkada vapur, Ayasofya ve Galata Kulesi" width="1600" height="900" fetchpriority="high">
+    <img src="img/hero.webp" alt="Boğaz kıyısında bir masada okey oynayan üç arkadaş; arkada vapur, simitçi ve İstanbul siluet" width="1672" height="941" fetchpriority="high">
     <div class="wrap">
+      <p class="kicker"><i aria-hidden="true"></i>Ücretsiz · iPhone ve Android'de çok yakında</p>
       <h1 class="brand">OKEY<span>İSTANBUL</span></h1>
       <p class="slogan">OKEYİN KALBİ İSTANBUL'DA ATAR!</p>
-      <p class="lede">Boğaz manzaralı masalarda ücretsiz okey. Çay söyle, taşlarını diz, eli bitir.</p>
-      <p class="soon"><span class="dot" aria-hidden="true"></span>Yakında iPhone ve Android'de</p>
+      <p class="lede">Boğaz kıyısında, köy kahvesinde, Hünkâr sarayında. Gerçek oyuncularla okey oyna, yeni dostlar edin, arkadaşlarını masana çağır, her ay kupaları topla.</p>
+      <div class="stores">
+        <div class="store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><div><small>App Store</small><b>Çok yakında</b></div></div>
+        <div class="store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7zM14.4 13.3l2.8 2.9-11.6 6.7c-.5.3-1 .3-1.4.1zM20.4 10.6c.9.5.9 1.8 0 2.4l-2.5 1.4-3.1-3.1 3.1-3.1zM5.6 1.2l11.6 6.7-2.8 2.9L4.2 1.1c.4-.2.9-.2 1.4.1z"/></svg><div><small>Google Play</small><b>Çok yakında</b></div></div>
+      </div>
+      <ul class="facts">
+        <li><b>10</b>salon</li>
+        <li><b>3</b>masa ambiyansı</li>
+        <li><b>10</b>aylık kupa</li>
+        <li><b>29</b>avatar</li>
+        <li><b>4</b>can dost</li>
+      </ul>
     </div>
   </div>
 
   <section id="oyun">
-    <div class="wrap">
-      <p class="eyebrow">Oyun</p>
-      <h2>Bildiğin okey, İstanbul'un en güzel masalarında</h2>
-      <p class="intro">Meydan'dan Saray'a on salon, her salonda farklı masa ücretleri. Gösterge, çifte gitme, okey atarak bitirme ve çanak kırma: kurallar mahalle kahvesindeki gibi.</p>
-      <div class="shots">
-        <figure class="shot s1"><img src="/masa.webp" alt="Oyun masası: ıstakada dizili taşlar, ortada deste ve gösterge, çevrede dört oyuncu" width="1600" height="900" loading="lazy">
-          <figcaption><b>Boğaz kıyısında dört kişilik masa</b>Sırası gelen titreşimle haber alır; okey ıstakaya ters gelir, çift dokununca açılır.</figcaption></figure>
-        <figure class="shot s2"><img src="/lobi.webp" alt="Salon seçim ekranı: Kahvehane, Çarşı, Han, Kule ve Köşk salonları, giriş ve masa ücretleriyle" width="1600" height="900" loading="lazy">
-          <figcaption><b>Kahvehaneden saraya on salon</b>Bütçene göre salonunu seç; masada kimin oturduğunu ve çanağı görerek otur.</figcaption></figure>
-        <figure class="shot s3"><img src="/hunkar.webp" alt="Hünkâr salonu: saray odasında ipek örtülü masa, sedef kakmalı ıstakalar ve altın çerçeveli taşlar" width="1600" height="900" loading="lazy">
-          <figcaption><b>Hünkâr salonu</b>İpek örtü, sedef kakmalı abanoz ıstakalar ve altın çerçeveli taşlarla saray masası.</figcaption></figure>
+    <div class="wrap split">
+      <div class="txt">
+        <p class="eyebrow">Oynaması çok kolay</p>
+        <h2>Bir dokunuşla masadasın</h2>
+        <p class="intro">Bildiğin okey, mahalle kahvesindeki kurallarla. Taşları elle dizmekle uğraşmak istemezsen oyun senin için dizer.</p>
+        <ol class="steps">
+          <li><div><b>Hemen oyna'ya dokun</b><span>Salonuna uygun bir masaya saniyeler içinde oturursun. Bekleyen oyuncu varsa onunla eşleşirsin.</span></div></li>
+          <li><div><b>Seri diz ile taşlarını hazırla</b><span>Seriler ve perler kendiliğinden yan yana gelir, ikililer ayrılır, tek kalanlar sağ alta dizilir.</span></div></li>
+          <li><div><b>Sürükle, at, bitir</b><span>Taşı yerden ya da desteden ıstakana çek, istediğin yere bırak. Son taşı Bitir alanına bırakınca el senindir.</span></div></li>
+        </ol>
+        <ul class="chips" aria-label="Kurallar">
+          <li>Gösterge</li><li>Okey ve sahte okey</li><li>12-13-1 serisi</li><li>Çifte gitme</li><li>Okey atarak bitirme</li><li>Çanak</li>
+        </ul>
       </div>
+      <figure class="phone"><img src="img/oyun-bogaz.webp" alt="Boğaz masasında oyun: ıstakada seri diz ile dizilmiş taşlar, ortada deste ve gösterge, çevrede üç oyuncu" width="1600" height="900" loading="lazy"></figure>
+    </div>
+  </section>
 
-      <div class="feats">
-        <div class="feat"><span class="num">101 · 106 TAŞ</span><h3>Gerçek okey kuralları</h3><p>Gösterge, okey ve sahte okey, 12-13-1 serisi, çifte gitme, okey atarak bitirme.</p></div>
-        <div class="feat"><span class="num">TEK'E TEK · 4 KİŞİ</span><h3>İki masa düzeni</h3><p>İster dört kişilik klasik masa, ister tek'e tek hızlı eller.</p></div>
-        <div class="feat"><span class="num">ÇAY · SİMİT · KÜNEFE</span><h3>Masaya ikram et</h3><p>Rakibine çay ısmarla, kazanana lale gönder; hediyeler masadan kalkana kadar durur.</p></div>
-        <div class="feat"><span class="num">60 SANİYE</span><h3>Bağlantın kopsa da yerin hazır</h3><p>İnternetin giderse 60 saniye içinde aynı masaya, aynı taşlarla dönersin.</p></div>
+  <section id="masalar">
+    <div class="wrap">
+      <p class="eyebrow">Manzara senden</p>
+      <h2>İstanbul'un en güzel masaları</h2>
+      <p class="intro">Masanı nerede kuracağını sen seç. Ambiyans ayarlardan değişir; Hünkâr salonunda saray masası kendiliğinden açılır.</p>
+      <div class="tabs" role="tablist" aria-label="Masa ambiyansları">
+        <button class="tab" role="tab" id="t-bogaz" aria-controls="p-bogaz" aria-selected="true">Boğaz kıyısı</button>
+        <button class="tab" role="tab" id="t-kahve" aria-controls="p-kahve" aria-selected="false">Köy kahvesi</button>
+        <button class="tab" role="tab" id="t-hunkar" aria-controls="p-hunkar" aria-selected="false">Hünkâr sarayı</button>
+        <button class="tab" role="tab" id="t-duo" aria-controls="p-duo" aria-selected="false">Tek'e tek</button>
+      </div>
+      <div class="stage">
+        <figure id="p-bogaz" role="tabpanel" aria-labelledby="t-bogaz"><div class="phone"><img src="img/oyun-bogaz.webp" alt="Boğaz Köprüsü önünde yeşil çuhalı dört kişilik masa" width="1600" height="900" loading="lazy"></div>
+          <figcaption><b>Boğaz kıyısı</b><span>Köprü, vapur ve martılar. Dört kişilik klasik masa.</span></figcaption></figure>
+        <figure id="p-kahve" role="tabpanel" aria-labelledby="t-kahve" hidden><div class="phone"><img src="img/oyun-kahve.webp" alt="Köy kahvesinde eskimiş çuhalı ahşap masa, arkada soba ve çaydanlık" width="1600" height="900" loading="lazy"></div>
+          <figcaption><b>Köy kahvesi</b><span>Soba başı, ince belli çay, yıllanmış çuha.</span></figcaption></figure>
+        <figure id="p-hunkar" role="tabpanel" aria-labelledby="t-hunkar" hidden><div class="phone"><img src="img/oyun-hunkar.webp" alt="Hünkâr salonu: gece Boğaz manzaralı saray odasında sedef kakmalı ıstakalar" width="1600" height="900" loading="lazy"></div>
+          <figcaption><b>Hünkâr sarayı</b><span>Sedef kakmalı abanoz ıstakalar, gece ışıklarıyla Boğaz.</span></figcaption></figure>
+        <figure id="p-duo" role="tabpanel" aria-labelledby="t-duo" hidden><div class="phone"><img src="img/oyun-duo.webp" alt="İki kişilik masa: karşılıklı iki oyuncu" width="1600" height="900" loading="lazy"></div>
+          <figcaption><b>Tek'e tek</b><span>İki kişilik masada daha hızlı eller.</span></figcaption></figure>
+      </div>
+      <p class="ladder"><strong>10 salon</strong><span>Meydan</span><span>Mahalle</span><span>Kahvehane</span><span>Çarşı</span><span>Han</span><span>Kule</span><span>Köşk</span><span>Yalı</span><span>Saray</span><span>Hünkâr</span></p>
+    </div>
+  </section>
+
+  <section id="dostluk">
+    <div class="wrap split rev">
+      <figure class="phone"><img src="img/oyun-ikram.webp" alt="Masada ikram ekranı: çay, Türk kahvesi, simit, lokum gibi ikramlar" width="1600" height="900" loading="lazy"></figure>
+      <div class="txt">
+        <p class="eyebrow">Bir masa, yeni dostlar</p>
+        <h2>Okey yalnız oynanmaz</h2>
+        <p class="intro">Masalar'da yalnızca gerçek oyuncular oturur. Sohbet et, rakibine çay ısmarla, eli bitirene Kız Kulesi gönder. Beğendiğin oyuncuyu arkadaş ekle, bir dahaki sefere aynı masada buluşun.</p>
+        <div class="treats" aria-label="İkram ve hediyeler">
+          <img src="img/g1.webp" alt="Çay" width="72" height="72" loading="lazy">
+          <img src="img/g2.webp" alt="Simit" width="72" height="72" loading="lazy">
+          <img src="img/g3.webp" alt="Lokum" width="72" height="72" loading="lazy">
+          <img src="img/g4.webp" alt="Kız Kulesi" width="72" height="72" loading="lazy">
+          <img src="img/g5.webp" alt="Saray kaftanı" width="72" height="72" loading="lazy">
+          <img src="img/g7.webp" alt="Altın vapur" width="72" height="72" loading="lazy">
+          <img src="img/g6.webp" alt="Yalı anahtarı" width="72" height="72" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="petsHead"><h3>Can dostlar</h3><p>Masadaki arkadaşına gönderebileceğin en sevimli hediyeler.</p></div>
+      <div class="pets">
+        <figure class="pet"><img src="img/pet-muhabbet.webp" alt="Muhabbet kuşu" width="200" height="200" loading="lazy"><figcaption>Muhabbet kuşu<small>50.000 altın</small></figcaption></figure>
+        <figure class="pet"><img src="img/pet-kedi.webp" alt="Tekir kedi" width="200" height="200" loading="lazy"><figcaption>Tekir kedi<small>50.000 altın</small></figcaption></figure>
+        <figure class="pet"><img src="img/pet-pomeranian.webp" alt="Pomeranian" width="200" height="200" loading="lazy"><figcaption>Pomeranian<small>50.000 altın</small></figcaption></figure>
+        <figure class="pet"><img src="img/pet-jako.webp" alt="Jako papağanı" width="200" height="200" loading="lazy"><figcaption>Jako papağanı<small>50.000 altın</small></figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section id="iletisim">
+  <section id="davet">
+    <div class="wrap split">
+      <div class="txt">
+        <p class="eyebrow">Arkadaşını çağır</p>
+        <h2>Masana kimi istersen onu çağır</h2>
+        <p class="intro">Her oyuncunun bir davet kodu var. Kodunu WhatsApp'tan gönder; arkadaşın oyuna girip kodu yazsın, ikiniz de kazanın.</p>
+        <ol class="invite">
+          <li><small>Sen</small><b>Kodunu paylaş</b><span>Arkadaşlar ekranındaki <span class="code">OI-AB12CD</span> gibi kodunu gönder.</span></li>
+          <li><small>Arkadaşın</small><b>250.000 altın</b><span>İlk 7 gün içinde kodu girince hoş geldin hediyesi alır.</span></li>
+          <li><small>Sen</small><b>1.000.000 altın</b><span>Arkadaşın 10. seviyeye ulaşınca hesabına geçer.</span></li>
+        </ol>
+        <ul class="notes">
+          <li>Özel masa kur, 6 haneli masa kodunu gönder; arkadaşların kodla aynı masaya otursun.</li>
+          <li>Masada yalnız kaldıysan Davet et'e dokun, çevrimiçi arkadaşın tek dokunuşla yanına gelsin.</li>
+          <li>Beklemek istemezsen Hemen oyna ile hemen yeni bir ele geç.</li>
+        </ul>
+      </div>
+      <figure class="phone"><img src="img/oyun-davet.webp" alt="Arkadaşlar ekranı: arkadaş kodu, kodla arkadaş ekleme, özel masa ve davet ödülleri" width="1600" height="900" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <div class="cabinet" id="kupalar">
+    <section class="wrap">
+      <div class="cabHead">
+        <div>
+          <p class="eyebrow">Her ay yeniden</p>
+          <h2>Kupa dolabını doldur</h2>
+          <p class="intro">On kupa, her birinde altın, gümüş ve bronz. Yarış her ayın ilk günü sıfırdan başlar; kazandığın kupalar dolabında kalır, aynı kupayı tekrar alırsan yanına ×2 yazılır.</p>
+        </div>
+        <div class="prizes" aria-label="Kupa ödülleri">
+          <div class="prize g"><small>Altın</small><b>10 Mn</b></div>
+          <div class="prize s"><small>Gümüş</small><b>5 Mn</b></div>
+          <div class="prize b"><small>Bronz</small><b>3 Mn</b></div>
+        </div>
+      </div>
+      <figure class="cabImg"><img src="img/kupalar.webp" alt="Kupa dolabı: Puan Lideri, Altın Lideri, Zafer, Maç Maratonu, Çanak Avcısı, Yenilmezlik, Gece Kuşu, Sadakat, Sosyal ve Cömertlik kupaları" width="1672" height="941" loading="lazy"></figure>
+      <div class="troWrap">
+        <table class="tro">
+          <thead><tr><th scope="col">Kupa</th><th scope="col">Ay içinde</th><th scope="col">Bronz</th><th scope="col">Gümüş</th><th scope="col">Altın</th></tr></thead>
+          <tbody>
+            <tr><td>Puan Lideri</td><td>En çok puan toplayanlar</td><td class="n">3.</td><td class="n">2.</td><td class="n">1.</td></tr>
+            <tr><td>Altın Lideri</td><td>En çok altın kazananlar</td><td class="n">3.</td><td class="n">2.</td><td class="n">1.</td></tr>
+            <tr><td>Zafer</td><td>El kazan</td><td class="n">200</td><td class="n">250</td><td class="n">300</td></tr>
+            <tr><td>Maç Maratonu</td><td>El oyna</td><td class="n">600</td><td class="n">800</td><td class="n">1.000</td></tr>
+            <tr><td>Çanak Avcısı</td><td>Çanak kır</td><td class="n">30</td><td class="n">40</td><td class="n">50</td></tr>
+            <tr><td>Yenilmezlik</td><td>Üst üste el kazan</td><td class="n">5</td><td class="n">7</td><td class="n">10</td></tr>
+            <tr><td>Gece Kuşu</td><td>00:00–06:00 arası el oyna</td><td class="n">50</td><td class="n">150</td><td class="n">300</td></tr>
+            <tr><td>Sadakat</td><td>Gün el oyna</td><td class="n">20</td><td class="n">25</td><td class="n">Her gün</td></tr>
+            <tr><td>Sosyal</td><td>Arkadaş getir</td><td class="n">10</td><td class="n">15</td><td class="n">20</td></tr>
+            <tr><td>Cömertlik</td><td>Hediye gönder</td><td class="n">600</td><td class="n">800</td><td class="n">1.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cabNote">Kupa ödülleri oyun içi altın olarak verilir. Her kupadan ayda bir kez alınır.</p>
+    </section>
+  </div>
+
+  <section id="avatarlar">
     <div class="wrap">
-      <p class="eyebrow">İletişim</p>
-      <h2>Bize yazın</h2>
+      <p class="eyebrow">Masada kim olacaksın?</p>
+      <h2>Kendine bir avatar seç</h2>
+      <p class="intro">Kahvenin müdavimi amcadan kaptana, aşçıdan Boğaz'ın kızlarına 29 karakter. İlk dokuzu baştan açık; diğerleri seviye atladıkça ya da altınla açılır.</p>
+    </div>
+    <div class="crowd" aria-hidden="true">
+      <div class="row">
+        <img src="img/av1.webp" alt="" loading="lazy"><img src="img/av2.webp" alt="" loading="lazy"><img src="img/av3.webp" alt="" loading="lazy"><img src="img/av4.webp" alt="" loading="lazy"><img src="img/av5.webp" alt="" loading="lazy"><img src="img/av6.webp" alt="" loading="lazy"><img src="img/av7.webp" alt="" loading="lazy"><img src="img/av8.webp" alt="" loading="lazy"><img src="img/av9.webp" alt="" loading="lazy"><img src="img/av10.webp" alt="" loading="lazy"><img src="img/av11.webp" alt="" loading="lazy"><img src="img/av12.webp" alt="" loading="lazy">
+        <img src="img/av1.webp" alt="" loading="lazy"><img src="img/av2.webp" alt="" loading="lazy"><img src="img/av3.webp" alt="" loading="lazy"><img src="img/av4.webp" alt="" loading="lazy"><img src="img/av5.webp" alt="" loading="lazy"><img src="img/av6.webp" alt="" loading="lazy"><img src="img/av7.webp" alt="" loading="lazy"><img src="img/av8.webp" alt="" loading="lazy"><img src="img/av9.webp" alt="" loading="lazy"><img src="img/av10.webp" alt="" loading="lazy"><img src="img/av11.webp" alt="" loading="lazy"><img src="img/av12.webp" alt="" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <div class="final" id="iletisim">
+    <img src="img/salon-gece.webp" alt="" loading="lazy" width="1672" height="940">
+    <div class="wrap">
+      <p class="eyebrow">Masan hazır</p>
+      <h2>Çay demlendi, taşlar karıldı</h2>
+      <p class="intro">Okey İstanbul çok yakında App Store ve Google Play'de. Görüşlerin ve önerilerin için bize yaz.</p>
       <div class="contact">
         <div class="card">
           <small>Destek ve öneriler</small>
           <div class="mail"><code id="mail">admin@okeyistanbul.com</code><button class="copy" type="button" id="copy">Kopyala</button></div>
-          <p style="color:var(--muted);font-size:.92rem">Oyundaki bir hatayı veya açığı fark ederseniz kullanmadan bize bildirin.</p>
+          <p style="color:var(--muted);font-size:.92rem">Oyunda bir hata fark edersen kullanmadan bize bildir.</p>
         </div>
         <div class="card">
           <small>Geliştirici</small>
-          <p>Nuri Murat Dereli<br><span style="color:var(--muted)">Kuşadası, Aydın · Türkiye</span></p>
+          <p>Nuri Murat Dereli<br><span style="color:var(--muted)">Türkiye</span></p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Okey İstanbul</span>
     <nav aria-label="Yasal"><a href="/gizlilik">Gizlilik Politikası</a><a href="/sartlar">Kullanım Şartları</a><a href="/gizlilik#en">Privacy Policy</a><a href="/sartlar#en">Terms of Use</a></nav>
+    <p>Okey İstanbul bir eğlence oyunudur. Oyundaki altın yalnızca oyun içinde kullanılır; gerçek para karşılığı yoktur, nakde çevrilemez ve oyuncular arasında satılamaz.</p>
   </div>
 </footer>
 
 <script>
-document.getElementById('copy').addEventListener('click',function(){
-  var b=this,t=document.getElementById('mail').textContent;
-  function ok(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent='Kopyala'},1800)}
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
-  try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}
-});
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function pick(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){pick(t)});t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();pick(n)})});
+  pick(tabs[0]);
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){var t=document.getElementById('mail').textContent;
+    function ok(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent='Kopyala'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}});
+})();
 </script>
 </body>
 </html>
