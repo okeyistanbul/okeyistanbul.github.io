@@ -28,20 +28,20 @@
   <a class="btn" id="open" href="#">Uygulamada aç</a>
   <a class="btn s" id="and" href="https://play.google.com/store/apps/details?id=com.okeyistanbul.app">Google Play'den indir</a>
   <a class="btn s" id="ios" href="#" style="display:none">App Store'dan indir</a>
-  <small>Uygulama açılmazsa önce indir, sonra bu bağlantıya tekrar dokun ya da Arkadaşlarla oyna → Kodla katıl bölümüne kodu yaz.</small>
+  <small>Uygulama açılmazsa önce indir, sonra bu bağlantıya tekrar dokun ya da Arkadaşlarla oyna → Kodla katıl bölümüne kodu yaz (kod yoksa arkadaşından yeni bağlantı iste).</small>
 </main>
 <script>
 (function(){
   var IOS_URL = ''; // App Store bağlantısı yayına girince buraya yazılır
-  var q = new URLSearchParams(location.search), c = (q.get('c') || '').replace(/\D/g, '').slice(0, 6), g = q.get('g') === '101' ? '101' : 'k';
-  document.getElementById('code').textContent = c || '····';
+  var q = new URLSearchParams(location.search), c = (q.get('c') || '').replace(/\D/g, '').slice(0, 6), g = q.get('g') === '101' ? '101' : 'k', mid = q.get('m') || '';
+  var ce = document.getElementById('code'); if (c) ce.textContent = c; else if (mid) { ce.textContent = 'Masaya davet'; ce.style.fontSize = '24px'; ce.style.letterSpacing = '0'; } else ce.textContent = '····';
   document.getElementById('game').textContent = g === '101' ? '101 Okey' : 'Klasik Okey';
-  var app = 'okeyistanbul://join?c=' + c + '&g=' + g, ua = navigator.userAgent || '';
+  var qs = location.search.replace(/^\?/, ''), app = 'okeyistanbul://join?' + qs, ua = navigator.userAgent || '';
   var o = document.getElementById('open'); o.href = app;
   var isIOS = /iPhone|iPad|iPod/.test(ua), isAnd = /Android/.test(ua);
   if (isIOS) { document.getElementById('and').style.display = 'none'; if (IOS_URL) { var i = document.getElementById('ios'); i.href = IOS_URL; i.style.display = ''; } }
-  if (isAnd) o.href = 'intent://join?c=' + c + '&g=' + g + '#Intent;scheme=okeyistanbul;package=com.okeyistanbul.app;S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.okeyistanbul.app') + ';end';
-  if (c && (isIOS || isAnd)) setTimeout(function () { location.href = o.href; }, 300);
+  if (isAnd) o.href = 'intent://join?' + qs + '#Intent;scheme=okeyistanbul;package=com.okeyistanbul.app;S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.okeyistanbul.app') + ';end';
+  if ((c || mid) && (isIOS || isAnd)) setTimeout(function () { location.href = o.href; }, 300);
 })();
 </script>
 </body>
