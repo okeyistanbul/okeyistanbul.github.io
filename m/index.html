@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Masaya davet · Okey İstanbul</title>
-<meta name="description" content="Arkadaşın seni Okey İstanbul'da masasına çağırıyor.">
-<meta property="og:title" content="Okey İstanbul · Masaya davet">
-<meta property="og:description" content="Arkadaşın seni masasına çağırıyor. Dokun, uygulama açılsın ve masaya otur.">
+<meta name="description" content="Arkadaşın seni Okey İstanbul'a çağırıyor: masaya davet ya da arkadaşlık isteği.">
+<meta property="og:title" content="Okey İstanbul · Davet">
+<meta property="og:description" content="Arkadaşın seni Okey İstanbul'a çağırıyor. Dokun, uygulama açılsın.">
 <style>
   :root { --bg:#2c070d; --card:#5a1220; --ink:#fff4e2; --muted:#e6cfb4; --gold:#f4c542; }
   * { box-sizing:border-box; }
@@ -28,20 +28,29 @@
   <a class="btn" id="open" href="#">Uygulamada aç</a>
   <a class="btn s" id="and" href="https://play.google.com/store/apps/details?id=com.okeyistanbul.app">Google Play'den indir</a>
   <a class="btn s" id="ios" href="#" style="display:none">App Store'dan indir</a>
-  <small>Uygulama açılmazsa önce indir, sonra bu bağlantıya tekrar dokun ya da Arkadaşlarla oyna → Kodla katıl bölümüne kodu yaz (kod yoksa arkadaşından yeni bağlantı iste).</small>
+  <small id="tip">Uygulama açılmazsa önce indir, sonra bu bağlantıya tekrar dokun ya da Arkadaşlarla oyna → Kodla katıl bölümüne kodu yaz (kod yoksa arkadaşından yeni bağlantı iste).</small>
 </main>
 <script>
 (function(){
   var IOS_URL = ''; // App Store bağlantısı yayına girince buraya yazılır
   var q = new URLSearchParams(location.search), c = (q.get('c') || '').replace(/\D/g, '').slice(0, 6), g = q.get('g') === '101' ? '101' : 'k', mid = q.get('m') || '';
-  var ce = document.getElementById('code'); if (c) ce.textContent = c; else if (mid) { ce.textContent = 'Masaya davet'; ce.style.fontSize = '24px'; ce.style.letterSpacing = '0'; } else ce.textContent = '····';
-  document.getElementById('game').textContent = g === '101' ? '101 Okey' : 'Klasik Okey';
+  /* v150: arkadaşlık bağlantısı ?a=OI-XXXXXX — uygulama açılınca seni arkadaş olarak ekler */
+  var fa = (q.get('a') || '').toUpperCase().replace(/[^A-Z0-9-]/g, '').slice(0, 10);
+  if (/^OI-?[A-Z0-9]{5,6}$/.test(fa)) {
+    document.title = 'Arkadaşlık daveti · Okey İstanbul';
+    document.querySelector('h1').textContent = 'Arkadaşlık daveti';
+    document.getElementById('who').textContent = 'Arkadaşın seni Okey İstanbul\'da arkadaş olarak eklemek istiyor. Arkadaş kodu:';
+    var cf = document.getElementById('code'); cf.textContent = fa; cf.style.fontSize = '32px'; cf.style.letterSpacing = '.06em';
+    document.getElementById('tip').textContent = 'Uygulama açılmazsa önce indir, sonra bu bağlantıya tekrar dokun ya da Arkadaşlar → Kodla arkadaş ekle bölümüne bu kodu yaz.';
+  }
+  var ce = document.getElementById('code'); if (/^OI-?[A-Z0-9]{5,6}$/.test(fa)) {} else if (c) ce.textContent = c; else if (mid) { ce.textContent = 'Masaya davet'; ce.style.fontSize = '24px'; ce.style.letterSpacing = '0'; } else ce.textContent = '····';
+  var gm = document.getElementById('game'); if (gm) gm.textContent = g === '101' ? '101 Okey' : 'Klasik Okey';
   var qs = location.search.replace(/^\?/, ''), app = 'okeyistanbul://join?' + qs, ua = navigator.userAgent || '';
   var o = document.getElementById('open'); o.href = app;
   var isIOS = /iPhone|iPad|iPod/.test(ua), isAnd = /Android/.test(ua);
   if (isIOS) { document.getElementById('and').style.display = 'none'; if (IOS_URL) { var i = document.getElementById('ios'); i.href = IOS_URL; i.style.display = ''; } }
   if (isAnd) o.href = 'intent://join?' + qs + '#Intent;scheme=okeyistanbul;package=com.okeyistanbul.app;S.browser_fallback_url=' + encodeURIComponent('https://play.google.com/store/apps/details?id=com.okeyistanbul.app') + ';end';
-  if ((c || mid) && (isIOS || isAnd)) setTimeout(function () { location.href = o.href; }, 300);
+  if ((c || mid || /^OI-?[A-Z0-9]{5,6}$/.test(fa)) && (isIOS || isAnd)) setTimeout(function () { location.href = o.href; }, 300);
 })();
 </script>
 </body>
