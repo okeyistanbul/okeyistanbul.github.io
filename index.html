@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Okey İstanbul</title>
-<meta name="description" content="Okey İstanbul: Boğaz kıyısında, köy kahvesinde ve Hünkâr sarayında gerçek oyuncularla ücretsiz okey. Yeni dostlar edin, arkadaşlarını masana çağır, her ay kupaları topla.">
+<meta name="description" content="Okey İstanbul: Klasik Okey ve 101 Okey tek uygulamada, ücretsiz. Manzaralı masalar, büyüteç, yazboz, sohbet ve ikramlar, arkadaşlarınla özel masa, her ay yenilenen kupalar.">
 <meta property="og:title" content="Okey İstanbul">
-<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Gerçek oyuncularla ücretsiz okey, yeni dostlar ve aylık kupa yarışı.">
+<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Klasik Okey ve 101 Okey tek uygulamada: manzaralı masalar, sohbet, ikramlar ve aylık kupalar.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image" content="https://okeyistanbul.com/img/og.jpg">
 <meta property="og:url" content="https://okeyistanbul.com/">
 <meta name="theme-color" content="#170609">
@@ -80,7 +82,7 @@ h3{text-wrap:balance}
 /* telefon çerçevesi (yatay) */
 .phone{position:relative;margin:0;padding:clamp(8px,1.2vw,14px);border-radius:clamp(22px,3vw,38px);background:linear-gradient(145deg,#3a1018,#120407);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 3px #08020a,0 30px 70px rgba(0,0,0,.55),0 0 0 1px var(--line)}
-.phone img{border-radius:clamp(14px,2vw,26px);aspect-ratio:16/9;object-fit:cover;width:100%}
+.phone img{border-radius:clamp(14px,2vw,26px);aspect-ratio:2095/969;object-fit:cover;width:100%}
 .phone::before{content:"";position:absolute;left:clamp(3px,.5vw,6px);top:50%;width:4px;height:14%;transform:translateY(-50%);border-radius:4px;background:#05010a}
 
 /* adımlar */
@@ -197,7 +199,42 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
   .treats img:nth-child(2n){animation-delay:-1.4s}.treats img:nth-child(3n){animation-delay:-2.6s}
   @keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
 }
+.yt{position:relative;margin:2rem 0 0;padding:clamp(8px,1.2vw,14px);border-radius:clamp(22px,3vw,38px);background:linear-gradient(145deg,#3a1018,#120407);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 3px #08020a,0 30px 70px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.yt-in{position:relative;aspect-ratio:16/9;border-radius:clamp(14px,2vw,26px);overflow:hidden;background:#0b0306}
+.yt-in iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;display:block}
+.yt-play img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .3s ease}
+.yt-play:hover img{transform:scale(1.02);filter:brightness(1.06)}
+.yt-btn{position:absolute;left:50%;top:50%;width:clamp(64px,9vw,96px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 50% 35%,var(--gold-hi),var(--gold) 55%,#a87a2a);box-shadow:0 0 0 6px rgba(23,6,9,.45),0 14px 40px rgba(0,0,0,.6);display:grid;place-items:center}
+.yt-btn svg{width:38%;height:38%;margin-left:8%;fill:#3a1208}
+.yt-play:hover .yt-btn{box-shadow:0 0 0 8px rgba(247,223,163,.25),0 14px 40px rgba(0,0,0,.6)}
+.yt-len{position:absolute;right:.9rem;bottom:.8rem;padding:.2rem .55rem;border-radius:.4rem;background:rgba(10,3,5,.82);color:var(--cream);font:600 .82rem var(--body);font-variant-numeric:tabular-nums}
+.yt-note{margin:.9rem 0 0;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.yt-play img{transition:none}.yt-play:hover img{transform:none}}
 @media (prefers-reduced-motion:reduce){.crowd .row{animation:none}html{scroll-behavior:auto}}
+
+/* v2026-11: iki oyun, 101, VIP */
+.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.8rem}
+.game{padding:1.1rem 1.15rem 1.15rem;border-radius:1.1rem;border:1px solid var(--line);background:radial-gradient(130% 100% at 0% 0%,rgba(125,26,44,.7),rgba(34,9,15,.92))}
+.game.b{background:radial-gradient(130% 100% at 0% 0%,rgba(30,62,120,.75),rgba(10,18,40,.92))}
+.game h3{margin:0 0 .35rem;font:700 1.25rem var(--display);color:var(--gold-hi);letter-spacing:.03em}
+.game p{margin:0;color:var(--muted);font-size:.94rem}
+.game ul{margin:.7rem 0 0;padding:0 0 0 1.05rem;color:var(--cream);font-size:.92rem;display:grid;gap:.25rem}
+.tag{display:inline-block;margin-left:.45rem;padding:.12rem .5rem;border-radius:99px;font:600 .68rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--night);background:linear-gradient(#f7dfa3,#d9a640);vertical-align:middle}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2.2rem}
+.feat{padding:1rem 1.1rem;border-radius:1rem;border:1px solid var(--line);background:rgba(34,9,15,.6)}
+.feat b{display:block;color:var(--cream);font-weight:600;margin-bottom:.25rem}
+.feat span{color:var(--muted);font-size:.92rem}
+.vipImg{margin:0;justify-self:center;max-width:26rem;width:100%}
+.vipImg img{width:100%;border-radius:50%;aspect-ratio:1;object-fit:cover;box-shadow:0 0 0 3px rgba(226,184,98,.55),0 30px 70px rgba(0,0,0,.6)}
+.perks{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.7rem}
+.perks li{display:grid;grid-template-columns:1.6rem 1fr;gap:.7rem;align-items:start;color:var(--cream)}
+.perks li::before{content:"♛";color:var(--gold);font-size:1.05rem;line-height:1.5}
+.perks small{display:block;color:var(--muted);font-size:.9rem}
+.crowd img{border-radius:1.4rem}
+@media (max-width:56rem){ .games{grid-template-columns:1fr} .feats{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -205,7 +242,7 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
 <header class="top">
   <div class="wrap">
     <a class="mark" href="/"><img src="/cip.png" alt="" width="40" height="40">OKEY İSTANBUL</a>
-    <nav aria-label="Ana menü"><a href="#oyun">Oyun</a><a href="#masalar">Masalar</a><a href="#dostluk">Dostluk</a><a href="#kupalar">Kupalar</a><a href="#iletisim">İletişim</a></nav>
+    <nav aria-label="Ana menü"><a href="#oyunlar">Oyunlar</a><a href="#yuzbir">101 Okey</a><a href="#masalar">Masalar</a><a href="#dostluk">Dostluk</a><a href="#vip">VIP</a><a href="#kupalar">Kupalar</a><a href="#iletisim">İletişim</a></nav>
   </div>
 </header>
 
@@ -216,37 +253,107 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
       <p class="kicker"><i aria-hidden="true"></i>Ücretsiz · iPhone ve Android'de çok yakında</p>
       <h1 class="brand">OKEY<span>İSTANBUL</span></h1>
       <p class="slogan">OKEYİN KALBİ İSTANBUL'DA ATAR!</p>
-      <p class="lede">Boğaz kıyısında, köy kahvesinde, Hünkâr sarayında. Gerçek oyuncularla okey oyna, yeni dostlar edin, arkadaşlarını masana çağır, her ay kupaları topla.</p>
+      <p class="lede">Klasik Okey ve 101 Okey tek uygulamada. Boğaz kıyısında, köy kahvesinde, saray odasında masanı kur; arkadaşlarını çağır, sohbet et, çay ısmarla, her ay kupaları topla.</p>
       <div class="stores">
         <div class="store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><div><small>App Store</small><b>Çok yakında</b></div></div>
         <div class="store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7zM14.4 13.3l2.8 2.9-11.6 6.7c-.5.3-1 .3-1.4.1zM20.4 10.6c.9.5.9 1.8 0 2.4l-2.5 1.4-3.1-3.1 3.1-3.1zM5.6 1.2l11.6 6.7-2.8 2.9L4.2 1.1c.4-.2.9-.2 1.4.1z"/></svg><div><small>Google Play</small><b>Çok yakında</b></div></div>
       </div>
       <ul class="facts">
+        <li><b>2</b>oyun</li>
         <li><b>10</b>salon</li>
-        <li><b>3</b>masa ambiyansı</li>
-        <li><b>10</b>aylık kupa</li>
-        <li><b>29</b>avatar</li>
-        <li><b>4</b>can dost</li>
+        <li><b>4</b>masa ambiyansı</li>
+        <li><b>5</b>masa rengi</li>
+        <li><b>100+</b>avatar</li>
       </ul>
     </div>
   </div>
 
-  <section id="oyun">
+  <section id="tanitim">
+    <div class="wrap">
+      <p class="eyebrow">Tanıtım filmi · 1 dakika 43 saniye</p>
+      <h2>Masaya oturmadan önce bir göz at</h2>
+      <p class="intro">101 Okey ve Klasik Okey tek uygulamada: manzaralı masalar, büyüteç, yazboz, sohbet, ikramlar, kupalar ve VIP. Oyundan görüntülerle, baştan sona.</p>
+      <div class="yt">
+        <div class="yt-in" id="yt" data-id="CfTJcPyH4tI">
+          <button class="yt-play" type="button" aria-label="Okey İstanbul tanıtım videosunu oynat (1 dakika 43 saniye)">
+            <img src="img/tanitim.webp" alt="" width="1280" height="720" loading="lazy">
+            <span class="yt-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></span>
+            <span class="yt-len" aria-hidden="true">1:43</span>
+          </button>
+        </div>
+      </div>
+      <p class="yt-note">Video oynat'a dokunduğunda YouTube'dan yüklenir. <a href="https://www.youtube.com/watch?v=CfTJcPyH4tI" target="_blank" rel="noopener">YouTube'da izle</a></p>
+    </div>
+  </section>
+
+  <section id="oyunlar">
     <div class="wrap split">
       <div class="txt">
-        <p class="eyebrow">Oynaması çok kolay</p>
+        <p class="eyebrow">Tek hesap, iki oyun</p>
+        <h2>Klasik mi, 101 mi? İkisi de burada</h2>
+        <p class="intro">Uygulamayı açınca oyununu seç. Çiplerin, seviyen, avatarın ve arkadaşların iki oyunda ortak; istediğin an öbürüne geç.</p>
+        <div class="games">
+          <div class="game">
+            <h3>Klasik Okey</h3>
+            <p>Taşını at, çanağı kır.</p>
+            <ul><li>Dört kişilik ve tek'e tek masalar</li><li>Okey atarak bitir, çanağı topla</li><li>Turnuvalar ve aylık kupalar</li></ul>
+          </div>
+          <div class="game b">
+            <h3>101 Okey<span class="tag">Yeni</span></h3>
+            <p>Yüz biri aç, masaya hükmet.</p>
+            <ul><li>Seri ya da çift açılış, işleme</li><li>Tekli ve eşli masalar</li><li>Katlamalı ya da katlamasız</li></ul>
+          </div>
+        </div>
+      </div>
+      <figure class="phone"><img src="img/oyunlar.webp" alt="Oyun seçim ekranı: Klasik Okey ve 101 Okey kartları, arkada Boğaz manzarası ve masa başında oyuncular" width="1600" height="740" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section id="oyun">
+    <div class="wrap split rev">
+      <figure class="phone"><img src="img/klasik-masa.webp" alt="Klasik Okey masası: Boğaz Köprüsü önünde yeşil çuhalı masa, ıstakada dizilmiş taşlar, ortada kalan taş ve gösterge" width="1600" height="740" loading="lazy"></figure>
+      <div class="txt">
+        <p class="eyebrow">Klasik Okey</p>
         <h2>Bir dokunuşla masadasın</h2>
         <p class="intro">Bildiğin okey, mahalle kahvesindeki kurallarla. Taşları elle dizmekle uğraşmak istemezsen oyun senin için dizer.</p>
         <ol class="steps">
-          <li><div><b>Hemen oyna'ya dokun</b><span>Salonuna uygun bir masaya saniyeler içinde oturursun. Bekleyen oyuncu varsa onunla eşleşirsin, yoksa bilgisayar oyuncularıyla hemen başlarsın.</span></div></li>
-          <li><div><b>Seri diz ile taşlarını hazırla</b><span>Seriler ve perler kendiliğinden yan yana gelir, ikililer ayrılır, tek kalanlar sağ alta dizilir.</span></div></li>
+          <li><div><b>Hemen oyna'ya dokun</b><span>Salonuna uygun bir masaya saniyeler içinde oturursun. Oyuncu az olduğunda boş koltukları bilgisayar oyuncuları doldurur; kimsenin taşını görmez, kurallara uyarak oynarlar.</span></div></li>
+          <li><div><b>Seri diz ya da çift diz</b><span>Seriler ve perler kendiliğinden yan yana gelir, ikililer ayrılır, tek kalanlar sağ alta dizilir.</span></div></li>
           <li><div><b>Sürükle, at, bitir</b><span>Taşı yerden ya da desteden ıstakana çek, istediğin yere bırak. Son taşı Bitir alanına bırakınca el senindir.</span></div></li>
         </ol>
         <ul class="chips" aria-label="Kurallar">
           <li>Gösterge</li><li>Okey ve sahte okey</li><li>12-13-1 serisi</li><li>Çifte gitme</li><li>Okey atarak bitirme</li><li>Çanak</li>
         </ul>
       </div>
-      <figure class="phone"><img src="img/oyun-bogaz.webp" alt="Boğaz masasında oyun: ıstakada seri diz ile dizilmiş taşlar, ortada deste ve gösterge, çevrede üç oyuncu" width="1600" height="900" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section id="yuzbir">
+    <div class="wrap">
+      <p class="eyebrow">101 Okey</p>
+      <h2>Yüz biri aç, masaya hükmet</h2>
+      <p class="intro">Seriyle ya da çiftle aç, yerdeki perlere işle, en düşük puanla eli bitir. Puanlar el el yazboza yazılır; okeyle bitirirsen cezalar katlanır.</p>
+      <div class="tabs" role="tablist" aria-label="101 Okey özellikleri">
+        <button class="tab" role="tab" id="t-lens" aria-controls="p-lens" aria-selected="true">Büyüteç</button>
+        <button class="tab" role="tab" id="t-yz" aria-controls="p-yz" aria-selected="false">Yazboz</button>
+        <button class="tab" role="tab" id="t-renk" aria-controls="p-renk" aria-selected="false">Masa renkleri</button>
+      </div>
+      <div class="stage">
+        <figure id="p-lens" role="tabpanel" aria-labelledby="t-lens"><div class="phone"><img src="img/yuzbir-buyutec.webp" alt="101 Okey masası: kalabalık Seriler alanında taş sürüklenirken açılan büyüteç, sağda Çiftler alanı" width="1600" height="740" loading="lazy"></div>
+          <figcaption><b>Büyüteç</b><span>Kalabalık masada taşı sürükle; büyüteç açılır, işleyeceğin yeri kolayca görür, tek dokunuşla yerleştirirsin.</span></figcaption></figure>
+        <figure id="p-yz" role="tabpanel" aria-labelledby="t-yz" hidden><div class="phone"><img src="img/yuzbir-yazboz.webp" alt="El sonu ekranı: yazboz defterinde el el puanlar ve oyuncuların el sonu puan dökümü" width="1600" height="740" loading="lazy"></div>
+          <figcaption><b>Yazboz</b><span>Her elin puanı deftere yazılır. Seri masalarında toplam puanla seriyi kazanan belli olur.</span></figcaption></figure>
+        <figure id="p-renk" role="tabpanel" aria-labelledby="t-renk" hidden><div class="phone"><img src="img/yuzbir-renk.webp" alt="Dört farklı renkte 101 masası: bordo, lacivert, yeşil ve bakır" width="1600" height="740" loading="lazy"></div>
+          <figcaption><b>Masa renkleri</b><span>Bordo, lacivert, yeşil, bakır ve mavi; masanın rengini ayarlardan sen seç.</span></figcaption></figure>
+      </div>
+      <div class="feats">
+        <div class="feat"><b>Tekli ve eşli</b><span>Dört kişi tek başına ya da karşılıklı ikişer kişilik takımlar.</span></div>
+        <div class="feat"><b>Katlamalı ya da katlamasız</b><span>Katlamalı masalarda en yüksek açışın üstüne açarak kazancını büyüt.</span></div>
+        <div class="feat"><b>Yardımlı mod</b><span>İşlenebilecek taşlar işaretlenir, İşle tuşuyla tek dokunuşta işlersin.</span></div>
+        <div class="feat"><b>Geri topla</b><span>Yanlış yere mi açtın? Taşını atmadan önce o turdaki hamlelerini geri alabilirsin.</span></div>
+        <div class="feat"><b>Okeyi al</b><span>Yerdeki perde okeyin yerine geçen taş sende varsa okeyi alıp kullan.</span></div>
+        <div class="feat"><b>Çaycı Murat ile ders</b><span>101'e yeni misin? Çaycı Murat bir el boyunca adım adım anlatır.</span></div>
+      </div>
     </div>
   </section>
 
@@ -254,22 +361,22 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
     <div class="wrap">
       <p class="eyebrow">Manzara senden</p>
       <h2>İstanbul'un en güzel masaları</h2>
-      <p class="intro">Masanı nerede kuracağını sen seç. Ambiyans ayarlardan değişir; Hünkâr salonunda saray masası kendiliğinden açılır.</p>
+      <p class="intro">Klasik Okey'de masanı nerede kuracağını sen seç; ambiyans ayarlardan tek dokunuşla değişir.</p>
       <div class="tabs" role="tablist" aria-label="Masa ambiyansları">
         <button class="tab" role="tab" id="t-bogaz" aria-controls="p-bogaz" aria-selected="true">Boğaz kıyısı</button>
         <button class="tab" role="tab" id="t-kahve" aria-controls="p-kahve" aria-selected="false">Köy kahvesi</button>
-        <button class="tab" role="tab" id="t-hunkar" aria-controls="p-hunkar" aria-selected="false">Hünkâr sarayı</button>
-        <button class="tab" role="tab" id="t-duo" aria-controls="p-duo" aria-selected="false">Tek'e tek</button>
+        <button class="tab" role="tab" id="t-saray" aria-controls="p-saray" aria-selected="false">Saray odası</button>
+        <button class="tab" role="tab" id="t-sade" aria-controls="p-sade" aria-selected="false">Sade masa</button>
       </div>
       <div class="stage">
-        <figure id="p-bogaz" role="tabpanel" aria-labelledby="t-bogaz"><div class="phone"><img src="img/oyun-bogaz.webp" alt="Boğaz Köprüsü önünde yeşil çuhalı dört kişilik masa" width="1600" height="900" loading="lazy"></div>
-          <figcaption><b>Boğaz kıyısı</b><span>Köprü, vapur ve martılar. Dört kişilik klasik masa.</span></figcaption></figure>
-        <figure id="p-kahve" role="tabpanel" aria-labelledby="t-kahve" hidden><div class="phone"><img src="img/oyun-kahve.webp" alt="Köy kahvesinde eskimiş çuhalı ahşap masa, arkada soba ve çaydanlık" width="1600" height="900" loading="lazy"></div>
+        <figure id="p-bogaz" role="tabpanel" aria-labelledby="t-bogaz"><div class="phone"><img src="img/amb-bogaz.webp" alt="Boğaz Köprüsü önünde yeşil çuhalı masa" width="1035" height="453" loading="lazy"></div>
+          <figcaption><b>Boğaz kıyısı</b><span>Köprü, vapur ve martılar eşliğinde.</span></figcaption></figure>
+        <figure id="p-kahve" role="tabpanel" aria-labelledby="t-kahve" hidden><div class="phone"><img src="img/amb-kahve.webp" alt="Köy kahvesinde ahşap masa" width="1035" height="453" loading="lazy"></div>
           <figcaption><b>Köy kahvesi</b><span>Soba başı, ince belli çay, yıllanmış çuha.</span></figcaption></figure>
-        <figure id="p-hunkar" role="tabpanel" aria-labelledby="t-hunkar" hidden><div class="phone"><img src="img/oyun-hunkar.webp" alt="Hünkâr salonu: gece Boğaz manzaralı saray odasında sedef kakmalı ıstakalar" width="1600" height="900" loading="lazy"></div>
-          <figcaption><b>Hünkâr sarayı</b><span>Sedef kakmalı abanoz ıstakalar, gece ışıklarıyla Boğaz.</span></figcaption></figure>
-        <figure id="p-duo" role="tabpanel" aria-labelledby="t-duo" hidden><div class="phone"><img src="img/oyun-duo.webp" alt="İki kişilik masa: karşılıklı iki oyuncu" width="1600" height="900" loading="lazy"></div>
-          <figcaption><b>Tek'e tek</b><span>İki kişilik masada daha hızlı eller.</span></figcaption></figure>
+        <figure id="p-saray" role="tabpanel" aria-labelledby="t-saray" hidden><div class="phone"><img src="img/amb-saray.webp" alt="Gece Boğaz manzaralı saray odasında masa" width="1035" height="457" loading="lazy"></div>
+          <figcaption><b>Saray odası</b><span>Gece ışıklarıyla Boğaz, kakmalı ıstakalar.</span></figcaption></figure>
+        <figure id="p-sade" role="tabpanel" aria-labelledby="t-sade" hidden><div class="phone"><img src="img/amb-sade.webp" alt="Sade yeşil çuha masa" width="1035" height="457" loading="lazy"></div>
+          <figcaption><b>Sade masa</b><span>Göz yormayan, yalnızca taşlara odaklanan düz çuha.</span></figcaption></figure>
       </div>
       <p class="ladder"><strong>10 salon</strong><span>Meydan</span><span>Mahalle</span><span>Kahvehane</span><span>Çarşı</span><span>Han</span><span>Kule</span><span>Köşk</span><span>Yalı</span><span>Saray</span><span>Hünkâr</span></p>
     </div>
@@ -277,11 +384,11 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
 
   <section id="dostluk">
     <div class="wrap split rev">
-      <figure class="phone"><img src="img/oyun-ikram.webp" alt="Masada ikram ekranı: çay, Türk kahvesi, simit, lokum gibi ikramlar" width="1600" height="900" loading="lazy"></figure>
+      <figure class="phone"><img src="img/sohbet-ikram.webp" alt="Masada sohbet penceresi ve ikram ekranı: hazır mesajlar, emojiler, çay, Türk kahvesi, simit gibi ikramlar" width="1600" height="740" loading="lazy"></figure>
       <div class="txt">
         <p class="eyebrow">Bir masa, yeni dostlar</p>
         <h2>Okey yalnız oynanmaz</h2>
-        <p class="intro">Masalar'da yalnızca gerçek oyuncular oturur, bilgisayar oyuncusu yoktur. Sohbet et, rakibine çay ısmarla, eli bitirene Kız Kulesi gönder. Beğendiğin oyuncuyu arkadaş ekle, bir dahaki sefere aynı masada buluşun.</p>
+        <p class="intro">Masada sohbet et: hazır mesajlar, emojiler ve VIP çıkartmaları. Rakibine çay ısmarla, eli bitirene Kız Kulesi gönder. Beğendiğin oyuncuyu arkadaş ekle, bir dahaki sefere aynı masada buluşun.</p>
         <div class="treats" aria-label="İkram ve hediyeler">
           <img src="img/g1.webp" alt="Çay" width="72" height="72" loading="lazy">
           <img src="img/g2.webp" alt="Simit" width="72" height="72" loading="lazy">
@@ -309,19 +416,37 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
       <div class="txt">
         <p class="eyebrow">Arkadaşını çağır</p>
         <h2>Masana kimi istersen onu çağır</h2>
-        <p class="intro">Her oyuncunun bir davet kodu var. Kodunu WhatsApp'tan gönder; arkadaşın oyuna girip kodu yazsın, ikiniz de kazanın.</p>
+        <p class="intro">Arkadaşını adıyla ara ya da davet koduyla ekle. Kodunu WhatsApp'tan gönder; arkadaşın oyuna girip kodu yazsın, ikiniz de kazanın.</p>
         <ol class="invite">
           <li><small>Sen</small><b>Kodunu paylaş</b><span>Arkadaşlar ekranındaki <span class="code">OI-AB12CD</span> gibi kodunu gönder.</span></li>
           <li><small>Arkadaşın</small><b>250.000 çip</b><span>İlk 7 gün içinde kodu girince hoş geldin hediyesi alır.</span></li>
           <li><small>Sen</small><b>1.000.000 çip</b><span>Arkadaşın 10. seviyeye ulaşınca hesabına geçer.</span></li>
         </ol>
         <ul class="notes">
-          <li>Özel masa kur, 6 haneli masa kodunu gönder; arkadaşların kodla aynı masaya otursun.</li>
+          <li>Özel masa kur, masa kodunu gönder; arkadaşların kodla aynı masaya otursun.</li>
           <li>Masada yalnız kaldıysan Davet et'e dokun, çevrimiçi arkadaşın tek dokunuşla yanına gelsin.</li>
-          <li>Beklemek istemezsen Hemen oyna ile hemen yeni bir ele geç.</li>
+          <li>Arkadaşının oturduğu masa Masalar'ın en üstünde görünür; bir dokunuşla yanına geç.</li>
         </ul>
       </div>
-      <figure class="phone"><img src="img/oyun-davet.webp" alt="Arkadaşlar ekranı: arkadaş kodu, kodla arkadaş ekleme, özel masa ve davet ödülleri" width="1600" height="900" loading="lazy"></figure>
+      <figure class="phone"><img src="img/arkadaslar.webp" alt="Arkadaşlar ekranı: adla oyuncu arama, arkadaş kodu, kodla arkadaş ekleme, özel masa ve çevrimiçi arkadaşlar" width="1600" height="740" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section id="vip">
+    <div class="wrap split rev">
+      <figure class="vipImg"><img src="img/vip-cerceve.webp" alt="Masada taçlı VIP çerçeveli oyuncu avatarı" width="540" height="520" loading="lazy"></figure>
+      <div class="txt">
+        <p class="eyebrow">VIP üyelik</p>
+        <h2>Masada taç senin başında</h2>
+        <p class="intro">VIP olunca masadaki herkes fark eder. Ayrıcalıklar Klasik Okey'de ve 101 Okey'de geçerlidir.</p>
+        <ul class="perks">
+          <li><div>Taçlı İstanbul çerçevesi<small>Masada avatarının çevresinde özel çerçeve.</small></div></li>
+          <li><div>VIP çıkartmaları<small>Sohbette yalnız VIP'lere açık çıkartma emojileri.</small></div></li>
+          <li><div>Her ay 10 milyon çip<small>Üyeliğin sürdükçe her ay hesabına geçer.</small></div></li>
+          <li><div>2 kat günlük ödül<small>Günlük bonus ikiye katlanır.</small></div></li>
+        </ul>
+        <p class="intro" style="margin-top:1.4rem">Herkes için her gün ödül ve Şans Çarkı da var.</p>
+      </div>
     </div>
   </section>
 
@@ -331,7 +456,7 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
         <div>
           <p class="eyebrow">Her ay yeniden</p>
           <h2>Kupa dolabını doldur</h2>
-          <p class="intro">On kupa, her birinde altın, gümüş ve bronz. Yarış her ayın ilk günü sıfırdan başlar; kazandığın kupalar dolabında kalır, aynı kupayı tekrar alırsan yanına ×2 yazılır.</p>
+          <p class="intro">On kupa, her birinde altın, gümüş ve bronz. Klasik Okey ve 101 Okey'in kupa yarışları ayrıdır. Yarış her ayın ilk günü sıfırdan başlar; kazandığın kupalar dolabında kalır, aynı kupayı tekrar alırsan yanına ×2 yazılır. Ay içinde özel turnuvalar da düzenlenir.</p>
         </div>
         <div class="prizes" aria-label="Kupa ödülleri">
           <div class="prize g"><small>Altın</small><b>10 Mn</b></div>
@@ -339,7 +464,7 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
           <div class="prize b"><small>Bronz</small><b>3 Mn</b></div>
         </div>
       </div>
-      <figure class="cabImg"><img src="img/kupalar.webp" alt="Kupa dolabı: Puan Lideri, Altın Lideri, Zafer, Maç Maratonu, Çanak Avcısı, Yenilmezlik, Gece Kuşu, Sadakat, Sosyal ve Cömertlik kupaları" width="1672" height="941" loading="lazy"></figure>
+      <figure class="cabImg"><img src="img/kupa-dolabi.webp" alt="Oyundaki Kupa Dolabı: altın, gümüş ve bronz kupalar, Puan Lideri kupasının açıklaması" width="1600" height="740" loading="lazy"></figure>
       <div class="troWrap">
         <table class="tro">
           <thead><tr><th scope="col">Kupa</th><th scope="col">Ay içinde</th><th scope="col">Bronz</th><th scope="col">Gümüş</th><th scope="col">Altın</th></tr></thead>
@@ -365,13 +490,13 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
     <div class="wrap">
       <p class="eyebrow">Masada kim olacaksın?</p>
       <h2>Kendine bir avatar seç</h2>
-      <p class="intro">Kahvenin müdavimi amcadan kaptana, aşçıdan Boğaz'ın kızlarına 29 karakter. İlk dokuzu baştan açık; diğerleri seviye atladıkça ya da çiple açılır.</p>
+      <p class="intro">Kahvenin müdavimi teyzeden kaptana, aşçıdan öğrenciye 100'den fazla karakter. Çoğu baştan açık; özel avatarlar seviye atladıkça ya da çiple açılır.</p>
     </div>
     <div class="crowd" aria-hidden="true">
       <div class="row">
-        <img src="img/av1.webp" alt="" loading="lazy"><img src="img/av2.webp" alt="" loading="lazy"><img src="img/av3.webp" alt="" loading="lazy"><img src="img/av4.webp" alt="" loading="lazy"><img src="img/av5.webp" alt="" loading="lazy"><img src="img/av6.webp" alt="" loading="lazy"><img src="img/av7.webp" alt="" loading="lazy"><img src="img/av8.webp" alt="" loading="lazy"><img src="img/av9.webp" alt="" loading="lazy"><img src="img/av10.webp" alt="" loading="lazy"><img src="img/av11.webp" alt="" loading="lazy"><img src="img/av12.webp" alt="" loading="lazy">
-        <img src="img/av1.webp" alt="" loading="lazy"><img src="img/av2.webp" alt="" loading="lazy"><img src="img/av3.webp" alt="" loading="lazy"><img src="img/av4.webp" alt="" loading="lazy"><img src="img/av5.webp" alt="" loading="lazy"><img src="img/av6.webp" alt="" loading="lazy"><img src="img/av7.webp" alt="" loading="lazy"><img src="img/av8.webp" alt="" loading="lazy"><img src="img/av9.webp" alt="" loading="lazy"><img src="img/av10.webp" alt="" loading="lazy"><img src="img/av11.webp" alt="" loading="lazy"><img src="img/av12.webp" alt="" loading="lazy">
-      </div>
+      <img src="img/avt1.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt2.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt3.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt4.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt5.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt6.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt7.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt8.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt9.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt10.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt11.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt12.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt13.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt14.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt15.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt16.webp" alt="" width="192" height="192" loading="lazy">
+      <img src="img/avt1.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt2.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt3.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt4.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt5.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt6.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt7.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt8.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt9.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt10.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt11.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt12.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt13.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt14.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt15.webp" alt="" width="192" height="192" loading="lazy"><img src="img/avt16.webp" alt="" width="192" height="192" loading="lazy">
+    </div>
     </div>
   </section>
 
@@ -380,7 +505,7 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
     <div class="wrap">
       <p class="eyebrow">Masan hazır</p>
       <h2>Çay demlendi, taşlar karıldı</h2>
-      <p class="intro">Okey İstanbul çok yakında App Store ve Google Play'de. Görüşlerin ve önerilerin için bize yaz.</p>
+      <p class="intro">Okey İstanbul çok yakında Google Play ve App Store'da. Görüşlerin ve önerilerin için bize yaz.</p>
       <div class="contact">
         <div class="card">
           <small>Destek ve öneriler</small>
@@ -406,15 +531,20 @@ footer p{margin:0;flex-basis:100%;font-size:.82rem;opacity:.85}
 
 <script>
 (function(){
-  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  [].forEach.call(document.querySelectorAll('[role=tablist]'),function(L){var tabs=[].slice.call(L.querySelectorAll('.tab'));
   function pick(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
   tabs.forEach(function(t,i){t.addEventListener('click',function(){pick(t)});t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();pick(n)})});
-  pick(tabs[0]);
+  pick(tabs[0])});
   var b=document.getElementById('copy');
   b.addEventListener('click',function(){var t=document.getElementById('mail').textContent;
     function ok(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent='Kopyala'},1800)}
     function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
     try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}});
+  var y=document.getElementById('yt');
+  if(y){y.querySelector('.yt-play').addEventListener('click',function(){var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+y.getAttribute('data-id')+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    f.title='Okey İstanbul tanıtım videosu';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';
+    y.innerHTML='';y.appendChild(f)})}
 })();
 </script>
 </body>
