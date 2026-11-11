@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://okeyistanbul.com/sitemap.xml

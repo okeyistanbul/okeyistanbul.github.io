@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Okey İstanbul Kullanım Şartları">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://okeyistanbul.com/sartlar">
+<title>Kullanım Şartları · Okey İstanbul</title>
+<link rel="stylesheet" href="/fonts.css">
+<style>
+/* Düzen: tek okuma sütunu, üstte marka şeridi + dil seçici, içindekiler, numaralı yasal maddeler */
+:root{
+  --bg:#fbf7f2; --paper:#ffffff; --fg:#2a1418; --muted:#6e5a5c; --line:#eadcd2;
+  --brand:#7a1426; --brand-ink:#fff4dc; --gold:#a9781c; --chip:#f4e9dc;
+  --display:'Cinzel',Georgia,'Times New Roman',serif;
+  --body:'Rubik',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#170a0d; --paper:#21100f; --fg:#f3e6d8; --muted:#b9a39a; --line:#3a2223;
+  --brand:#5a0e1c; --brand-ink:#f7dfa3; --gold:#e2b862; --chip:#2c1717; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#170a0d; --paper:#21100f; --fg:#f3e6d8; --muted:#b9a39a; --line:#3a2223;
+  --brand:#5a0e1c; --brand-ink:#f7dfa3; --gold:#e2b862; --chip:#2c1717; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.7 var(--body);padding-inline:16px;padding-block:0 3rem}
+.band{background:var(--brand);color:var(--brand-ink);margin-inline:-16px;padding:2.2rem 16px 1.8rem}
+.band .in,.wrap{max-width:46rem;margin-inline:auto}
+.brand{font:700 clamp(1.6rem,5vw,2.3rem)/1.1 var(--display);letter-spacing:.06em;margin:0}
+.band p{margin:.4rem 0 0;opacity:.85;font-size:.95rem}
+.langs{display:flex;gap:.5rem;margin-top:1.2rem;flex-wrap:wrap}
+.langs a{color:var(--brand-ink);text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .9rem;border:1px solid color-mix(in srgb,var(--brand-ink) 45%,transparent);border-radius:99px}
+.langs a[aria-current="true"]{background:var(--brand-ink);color:var(--brand)}
+.langs a:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin:1.6rem 0 .5rem;font-size:.85rem;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:500}
+nav.toc{background:var(--chip);border-radius:.6rem;padding:1rem 1.2rem;margin:1.2rem 0 2rem}
+nav.toc h2{font:600 .75rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+nav.toc ol{margin:0;padding-left:1.3rem;columns:2 16rem;column-gap:2rem;font-size:.92rem}
+nav.toc a{color:var(--fg);text-decoration:none}
+nav.toc a:hover{color:var(--gold)}
+section{scroll-margin-top:1rem}
+h2.sec{font:600 1.18rem/1.35 var(--body);margin:2.2rem 0 .6rem;text-wrap:balance;display:flex;gap:.6rem;align-items:baseline}
+h2.sec span{font:700 .95rem var(--display);color:var(--gold);min-width:1.6rem}
+p,li{max-width:65ch}
+ul{padding-left:1.2rem}
+li+li{margin-top:.3rem}
+.tbl{overflow-x:auto;margin:.8rem 0}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.9rem;background:var(--paper)}
+th,td{text-align:left;vertical-align:top;padding:.6rem .7rem;border-bottom:1px solid var(--line)}
+th{font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.note{border-left:3px solid var(--gold);padding:.2rem 0 .2rem 1rem;color:var(--muted);font-size:.92rem}
+.contact{background:var(--paper);border:1px solid var(--line);border-radius:.6rem;padding:1rem 1.2rem}
+.contact code{font:500 .95rem var(--body);user-select:all;color:var(--fg)}
+footer{margin-top:3rem;font-size:.82rem;color:var(--muted)}
+a{color:var(--gold)}
+[lang] [hidden]{display:none!important}
+
+.key{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:.6rem;padding:1.1rem 1.3rem;margin:1.4rem 0}
+.key h2{font:600 .78rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.key ul{margin:0}
+.sub{font:600 1rem var(--body);margin:1.4rem 0 .4rem;color:var(--fg)}
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="in">
+    <h1 class="brand">OKEY İSTANBUL</h1>
+    <p id="sub">Kullanım Şartları ve Son Kullanıcı Sözleşmesi</p>
+    <div class="langs" aria-label="Dil / Language">
+      <a href="#tr" id="lk-tr" aria-current="true">Türkçe</a>
+      <a href="#en" id="lk-en" aria-current="false">English</a>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= TÜRKÇE ======================= -->
+<main class="wrap" id="tr" lang="tr">
+  <div class="meta"><span>Yürürlük tarihi: <b>11 Kasım 2026</b></span><span>Sürüm: <b>3.1</b></span><span>Hizmet sağlayıcı: <b>Okey İstanbul</b></span></div>
+
+  <div class="key">
+    <h2>Özet: bilmeniz gereken en önemli kurallar</h2>
+    <ul>
+      <li><b>Okey İstanbul yalnızca eğlence amaçlıdır.</b> Oyunda gerçek para kazanılmaz; gerçek para veya değerli ödül verilmez.</li>
+      <li><b>Oyun çipleri gerçek paraya çevrilemez, alınıp satılamaz.</b> Çip, hesap veya sanal eşyaların gerçek para ya da herhangi bir karşılık ile alım satımı kesinlikle yasaktır.</li>
+      <li><b>İadesi onaylanan bir satın almanın çipi harcanmışsa, harcanan tutar bakiyenizden düşülür; bakiye yetmezse hesap eksi bakiyeye düşer.</b></li>
+      <li><b>Bu kuralların ihlali hesabın kalıcı olarak kapatılmasına neden olur.</b> Kapatılan hesaptaki çip ve satın alımlar iade edilmez.</li>
+      <li><b>Ödüller yalnızca oyun içi çiptir.</b> Ödüllü reklamlar günde en fazla 10 kez, her biri 500 çip; çoklu hesapla ödül veya davet ödülü toplamak yasaktır.</li>
+      <li><b>Rizikolu masalarında kayıp, bahsin çarpan kadar katı olabilir.</b> Rizikolu 51'de bahsin 19 katına, Rizikolu 101'de 15 katına kadar çip el süresince emanete alınır; el bitince yalnız gerçek tutar ödenir, kalan geri döner.</li>
+      <li><b>Oyuncu sayısı az olduğunda bazı masalarda bilgisayar oyuncuları bulunabilir.</b> Yalnızca gerçek oyuncularla oynamak için Masalar bölümünden kendi masanızı kurabilir ya da özel masa açabilirsiniz.</li>
+      <li><b>Oyundaki hata ve açıkları kötüye kullanmak yasaktır.</b> Bu yolla elde edilen kazançlar geri alınır; doğan zararın tazmini kanunun izin verdiği ölçüde kullanıcıdan talep edilir.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="İçindekiler"><h2>İçindekiler</h2><ol>
+    <li><a href="#tr-1">Taraflar ve kabul</a></li>
+    <li><a href="#tr-2">Yaş sınırı, hesap ve güvenlik</a></li>
+    <li><a href="#tr-3">Kullanım lisansı</a></li>
+    <li><a href="#tr-4">Oyunun niteliği</a></li>
+    <li><a href="#tr-5">Sanal çip ve sanal eşyalar</a></li>
+    <li><a href="#tr-6">Gerçek para ile alım satım yasağı</a></li>
+    <li><a href="#tr-7">Satın almalar, iadeler ve eksi bakiye</a></li>
+    <li><a href="#tr-8">Ödüller, promosyonlar ve arkadaş daveti</a></li>
+    <li><a href="#tr-9">Ödüllü reklamlar ve üçüncü taraf içerikler</a></li>
+    <li><a href="#tr-10">Yasak davranışlar</a></li>
+    <li><a href="#tr-11">Hata ve açıkların kötüye kullanılması</a></li>
+    <li><a href="#tr-12">Yaptırımlar</a></li>
+    <li><a href="#tr-13">Zararın tazmini</a></li>
+    <li><a href="#tr-14">Kullanıcı içeriği, sohbet ve topluluk kuralları</a></li>
+    <li><a href="#tr-15">Fikri mülkiyet ve telif hakkı bildirimleri</a></li>
+    <li><a href="#tr-16">Güncellemeler, hizmetin değiştirilmesi ve sona ermesi</a></li>
+    <li><a href="#tr-17">Sorumluluğun sınırları</a></li>
+    <li><a href="#tr-18">Uygulanacak hukuk ve uyuşmazlıklar</a></li>
+    <li><a href="#tr-19">Genel hükümler</a></li>
+    <li><a href="#tr-20">Değişiklikler ve iletişim</a></li>
+  </ol></nav>
+
+  <section id="tr-1"><h2 class="sec"><span>1</span>Taraflar ve kabul</h2>
+    <p>Bu Kullanım Şartları ("Şartlar"), Okey İstanbul mobil oyununu ve bağlı hizmetleri ("Oyun") sunan <b>Okey İstanbul</b> ("Hizmet Sağlayıcı", "biz"; iletişim: <code>admin@okeyistanbul.com</code>) ile Oyunu kullanan kişi ("Kullanıcı", "siz") arasındaki ilişkiyi düzenler. Oyunu indirerek, hesap oluşturarak veya kullanarak bu Şartları ve <a href="/gizlilik" target="_blank" rel="noopener">Gizlilik Politikası</a>'nı kabul etmiş olursunuz. Kabul etmiyorsanız Oyunu kullanmayınız.</p>
+    <p>Apple App Store veya Google Play üzerinden indirilen Oyun için ilgili mağazanın kullanım koşulları da ayrıca geçerlidir. Apple ve Google bu Şartların tarafı değildir ve Oyunun desteğinden sorumlu değildir.</p>
+  </section>
+
+  <section id="tr-2"><h2 class="sec"><span>2</span>Yaş sınırı, hesap ve güvenlik</h2>
+    <ul>
+      <li>Oyunu yalnızca <b>18 yaşını doldurmuş</b> kişiler kullanabilir.</li>
+      <li>Hesabınıza ait bilgilerin doğru olmasından ve giriş bilgilerinizin güvenliğinden siz sorumlusunuz. Hesabınızda yapılan işlemler size ait kabul edilir.</li>
+      <li>Hesaplar kişiseldir; başkasına devredilemez, satılamaz, kiralanamaz veya ortak kullanılamaz.</li>
+      <li>Kişi başına bir hesap kullanılmalıdır. Kuralları dolanmak, ödülleri çoğaltmak veya kendi kendine çip aktarmak amacıyla birden fazla hesap açılması yasaktır.</li>
+    </ul>
+    <ul>
+      <li>Oyuna misafir olarak ya da Apple, Google veya Facebook hesabınızla girebilirsiniz. Misafir hesabı cihazınıza bağlıdır; uygulamayı silmeniz veya cihaz değiştirmeniz halinde misafir hesabı geri getirilemeyebilir. İlerlemenizi korumak için hesabınızı Apple, Google veya Facebook ile bağlamanızı öneririz.</li>
+      <li>Hesabınızda yetkisiz bir işlem fark ederseniz bize hemen bildiriniz. Kullanıcı adınız küfür, hakaret, başkasının kimliğine bürünme veya reklam içeremez; bu tür adları değiştirme hakkımız saklıdır.</li>
+    </ul>
+  </section>
+
+  <section id="tr-3"><h2 class="sec"><span>3</span>Kullanım lisansı</h2>
+    <p>Bu Şartlara uymanız koşuluyla size, Oyunu kendi cihazınızda kişisel ve ticari olmayan eğlence amacıyla kullanmanız için sınırlı, kişisel, devredilemez, alt lisans verilemez, münhasır olmayan ve geri alınabilir bir lisans veririz. Oyun size satılmaz, yalnızca lisanslanır; bu lisans Oyun veya içerikleri üzerinde size mülkiyet hakkı vermez.</p>
+    <p>Lisans, Şartları ihlal etmeniz, hesabınızın kapatılması veya Oyunun sona ermesi halinde kendiliğinden sona erer.</p>
+  </section>
+
+  <section id="tr-4"><h2 class="sec"><span>4</span>Oyunun niteliği</h2>
+    <p>Okey İstanbul, geleneksel okey oyununun <b>yalnızca eğlence amaçlı</b> dijital bir sürümüdür. Oyun:</p>
+    <ul>
+      <li>Gerçek para, nakit, hediye kartı, mal veya değeri olan herhangi bir ödül <b>vermez</b>;</li>
+      <li>Oyunda kazanılan veya kaybedilen çiplerin gerçek hayatta <b>hiçbir parasal değeri yoktur</b>.</li>
+    </ul>
+    <p>Oyunun ve oyun çiplerinin, gerçek para kazandırmaya yönelik herhangi bir düzende kullanılması kesinlikle yasaktır.</p>
+    <p><b>Bilgisayar oyuncuları:</b> Oyun yeni olduğu için, beklemeden oynayabilmeniz amacıyla oyuncu sayısı az olduğunda <b>Hemen oyna</b> masalarında ve <b>Masalar</b> bölümündeki bazı masalarda boş koltuklara bilgisayar oyuncuları (bot) oturabilir. Bilgisayar oyuncuları herkesle aynı kurallarla oynar; yalnızca kendi taşlarını ve masada açık olan taşları görür, diğer oyuncuların ıstakasını göremez. Bilgisayar oyuncuları aylık kupalara, sıralamalara ve turnuvalara katılmaz, ödül almaz. Yalnızca gerçek oyuncularla oynamak isterseniz <b>Masalar</b> bölümünden kendi masanızı kurabilir ya da özel masa açabilirsiniz; bu masalara bilgisayar oyuncusu yalnızca masadakilerin tamamı <b>Hemen başla</b> oylamasını kabul ederse oturur. Bilgisayar oyuncuları masada adlarının yanında <b>“BİLGİSAYAR”</b> etiketiyle gösterilir.</p>
+    <p><b>Oyun modları:</b> Oyunda Klasik Okey, 101 Okey, 51 Okey, Rizikolu 51 ve Rizikolu 101 bulunur. Her modun kuralları oyundaki "Nasıl oynanır?" ekranında anlatılır. Bütün modlarda aynı oyun çipi kullanılır; hesap ve bakiye ortaktır.</p>
+    <ul>
+      <li><b>51 Okey:</b> İki kişilik, tek desteli, açılışı 51 olan ve çift açılmayan masadır. Bahis sabittir: eli kaybeden bahis kadar öder, kazanan bu tutardan %7 masa payı düşülmüş olarak alır. Masaya oturmak için bakiyenin bahsin en az 2 katı olması gerekir. Rakip beklerken isterseniz bilgisayara karşı oynayabilir ya da arkadaşınızı davet edebilirsiniz.</li>
+      <li><b>Rizikolu 51 ve Rizikolu 101:</b> Masanın ortak bir çarpanı vardır; el x1 ile başlar ve oyunda açıklanan olaylarla (okey, sahte okey ve göstergeyle ilgili taşların açılması, bitiş biçimi) büyür. Çarpanın tavanı Rizikolu 51'de <b>x19</b>, Rizikolu 101'de <b>x15</b>'tir. Eli kaybeden <b>bahis × çarpan</b> öder; kazanan bu tutardan %7 masa payı düşülmüş olarak alır. Deste biterse el berabere biter ve kimse ödeme yapmaz.</li>
+      <li><b>Emanet:</b> Rizikolu masasına oturmak için bakiyenin bahsin en az 19 katı (Rizikolu 51) veya 15 katı (Rizikolu 101) olması gerekir. El başlarken bu tutar emanete alınır ve el süresince harcanamaz; el bitince gerçek tutar ödenir, kalan anında hesabınıza geri döner.</li>
+      <li><b>El ortasında masadan ayrılmak:</b> Rizikolu masasında el sürerken masadan kalkan ya da bağlantısı koptuktan sonra süre içinde dönmeyen oyuncu eli kaybetmiş sayılır ve o anki çarpanın 4 fazlasıyla (tavanı geçmeden) bahis × çarpan öder. 51 Okey'de ayrılan oyuncu bahis kadar öder. Masadan ayrılmadan önce oyun ödenecek tutarı gösterir.</li>
+      <li><b>Rizikolu masalarında bilgisayar oyuncusu ve özel masa yoktur;</b> eşleşme rastgeledir. Çip aktarımını önlemek için aynı iki oyuncu arasında günde oynanabilecek el sayısı sınırlıdır.</li>
+    </ul>
+    <p><b>Masa süresi ödülü:</b> Masalar bölümündeki bir masada, masanın dolması için diğer oyuncuları beklediğiniz her dakika için <b>20 çip</b> biriktirirsiniz. El oynanırken ve masa doluyken eller arasında süre ödülü birikmez. Biriken çip, bir eli sonuna kadar oynadığınızda hesabınıza geçer; bir el için en fazla 30 dakikalık ödül verilir. Eli bitirmeden masadan kalkarsanız o ana kadar biriken süre ödülü verilmez.</p>
+  </section>
+
+  <section id="tr-5"><h2 class="sec"><span>5</span>Sanal çip ve sanal eşyalar</h2>
+    <ul>
+      <li>Oyundaki çip, avatar, hediye ve diğer sanal içerikler ("Sanal Ürünler") <b>yalnızca Oyun içinde kullanılmak üzere</b> size tanınan kişisel, devredilemez, münhasır olmayan ve geri alınabilir bir kullanım hakkıdır. Sanal Ürünler üzerinde mülkiyet hakkı doğmaz.</li>
+      <li>Sanal Ürünler gerçek paraya, mala veya hizmete <b>çevrilemez</b>; Hizmet Sağlayıcı tarafından geri satın alınmaz ve nakde dönüştürülmez.</li>
+      <li>Oyun içi ekonomiyi (fiyatlar, ödüller, masa ücretleri, kazanç oranları) oyun dengesini korumak amacıyla değiştirebiliriz.</li>
+      <li>Hesabınız kapandığında veya Oyun sona erdiğinde kullanılmamış Sanal Ürünler, kanunun zorunlu kıldığı haller dışında, iade edilmez.</li>
+    </ul>
+  </section>
+
+  <section id="tr-6"><h2 class="sec"><span>6</span>Gerçek para ile alım satım yasağı</h2>
+    <p><b>Çip, hesap veya herhangi bir Sanal Ürünün gerçek para veya herhangi bir maddi karşılık ile alınıp satılması, takas edilmesi veya buna aracılık edilmesi kesinlikle yasaktır.</b> Bu yasak, Oyun içinde veya dışında; internet siteleri, sosyal medya, mesajlaşma uygulamaları, forumlar, pazar yerleri veya yüz yüze yapılan her türlü işlemi kapsar. Yasak kapsamındaki işlemlere örnekler:</p>
+    <ul>
+      <li>Çipleri para karşılığı başka bir oyuncuya kasıtlı olarak kaybetmek, masada "aktarmak" veya hediye ile göndermek;</li>
+      <li>Çip yüklü hesap satmak, kiralamak veya satın almak;</li>
+      <li>Çip satışı ilanı vermek, alıcı ile satıcıyı buluşturmak;</li>
+      <li>Oyunu, oyun dışında gerçek para el değiştiren herhangi bir düzenin aracı olarak kullanmak.</li>
+    </ul>
+    <p>Bu yasağın ihlali tespit edildiğinde, işleme taraf olan <b>tüm hesaplar önceden bildirim yapılmaksızın kalıcı olarak kapatılır</b>, hesaplardaki çip ve Sanal Ürünler silinir ve iade yapılmaz. Yasa dışı bir faaliyet şüphesi bulunan durumlarda ilgili bilgiler, yasal yükümlülüklerimiz çerçevesinde yetkili makamlarla paylaşılabilir.</p>
+  </section>
+
+  <section id="tr-7"><h2 class="sec"><span>7</span>Satın almalar, iadeler ve eksi bakiye</h2>
+    <ul>
+      <li>Çip paketleri ve diğer satın almalar yalnızca Apple App Store veya Google Play üzerinden yapılır. Ödemeyi ilgili mağaza alır ve iade talepleri o mağazanın iade kurallarına tabidir.</li>
+      <li>Sanal Ürünler satın alma onaylandığı anda hesabınıza tanımlanarak anında ifa edilir. 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği uyarınca, elektronik ortamda anında ifa edilen ve tüketiciye anında teslim edilen gayri maddi mallara ilişkin sözleşmelerde cayma hakkı, satın alma öncesinde onayınız alınarak kullanılamayabilir.</li>
+      <li>Ödemesi tamamlanmış bir satın almanın haksız yere iptal ettirilmesi, ters ibraz (chargeback) yapılması veya sahte ödeme kullanılması halinde ilgili Sanal Ürünler geri alınır ve hesap askıya alınabilir veya kapatılabilir.</li>
+    </ul>
+    <h3 class="sub">İlk alışverişe 2 kat ve satın almanın tamamlanması</h3>
+    <ul>
+      <li><b>İlk alışverişe 2 kat:</b> Hesabınızın ilk çip paketi satın alımında, oyunda bu kampanyayla işaretlenen paketlerde (şu an 400 Bin, 3,5 Milyon ve 12 Milyon çip paketleri) paketin çipi <b>2 katı</b> olarak yüklenir. Kampanya hesap başına bir kez geçerlidir, VIP aboneliğinde uygulanmaz; satın alma iade edilirse kampanyayla verilen çip de iade hükümlerine göre geri alınır. Kampanyayı değiştirme veya sona erdirme hakkımız Bölüm 8'deki gibi saklıdır.</li>
+      <li><b>Satın almanın tamamlanması:</b> Çip ve VIP, satın alma mağaza tarafından doğrulandığında hesabınıza tanımlanır. Bağlantı veya mağaza kaynaklı bir nedenle doğrulama o an yapılamazsa uygulama satın alma kaydını cihazınızda saklayıp doğrulamayı kendiliğinden yeniden dener; doğrulanınca çip hesabınıza yüklenir. Ödemesi alınmış bir satın alma birkaç saat içinde hesabınıza yansımazsa Profil'deki oyuncu kimliğinizle ve mağazanın sipariş numarasıyla <code>admin@okeyistanbul.com</code> adresine yazınız.</li>
+    </ul>
+    <h3 class="sub">İade edilen satın almalar ve eksi bakiye</h3>
+    <p>Apple App Store veya Google Play üzerinden yapılan bir satın almanın iadesi ilgili mağaza tarafından onaylandığında, bu satın almayla hesabınıza tanımlanan çip ve Sanal Ürünler hesabınızdan geri alınır. Geri alma şu şekilde uygulanır:</p>
+    <ul>
+      <li>İade edilen paketle verilen çip, hesabınızdaki çip bakiyesinden düşülür.</li>
+      <li>İade edilen satın almayla edinilen çip veya Sanal Ürünler <b>iade onaylanmadan önce kullanılmış</b> (oyunda harcanmış, kaybedilmiş, hediye edilmiş veya başka bir eşya almak için kullanılmış) ise, kullanılan kısmın çip karşılığı da bakiyenizden düşülür. Bakiyeniz bu tutarı karşılamıyorsa <b>hesabınız eksi bakiyeye düşer</b>.</li>
+      <li>İade edilen satın almayla edinilen ve hâlâ hesabınızda bulunan Sanal Ürünler (avatar, eşya vb.) hesabınızdan kaldırılır.</li>
+      <li>Hesap eksi bakiyede olduğu sürece ücretli masalara oturma, hediye gönderme, mağazadan çiple alışveriş yapma ve çip gerektiren diğer özellikler kullanılamaz. Eksi bakiye; sonradan kazanılan ödüller, oyun kazançları ve yeni satın almalarla kapatılır.</li>
+      <li>Bu işlemlerden önce, eksi bakiye tutarı ve nedeni oyun içinde size bildirilir. Hesaplamada bir hata olduğunu düşünüyorsanız aşağıdaki iletişim adresinden itiraz edebilirsiniz.</li>
+      <li>İadenin kötüye kullanıldığı (örneğin satın alınan çipi harcadıktan sonra tekrar tekrar iade talep edildiği) tespit edilirse hesap ayrıca Bölüm 12 uyarınca askıya alınabilir veya kapatılabilir.</li>
+    </ul>
+    <h3 class="sub">VIP aylık abonelik</h3>
+    <ul>
+      <li>VIP, <b>aylık otomatik yenilenen bir aboneliktir</b>. Güncel ücreti satın alma ekranında ve ilgili mağazada gösterilir. Ödeme, satın almayı onayladığınızda App Store veya Google Play hesabınızdan alınır.</li>
+      <li>Abonelik, dönem bitiminden <b>en az 24 saat önce iptal edilmezse</b> aynı süre ve ücretle kendiliğinden yenilenir; yenileme ücreti dönem bitiminden önceki 24 saat içinde mağaza hesabınızdan alınır.</li>
+      <li>Aboneliğinizi cihazınızın mağaza hesabı ayarlarından (App Store: Ayarlar → Apple Kimliği → Abonelikler; Google Play: Ödemeler ve abonelikler) dilediğiniz zaman yönetebilir ve iptal edebilirsiniz. İptal, mevcut dönemin sonunda geçerli olur; dönemin kalan kısmı için kısmi iade yapılmaz, iade talepleri mağazanın kurallarına tabidir.</li>
+      <li>VIP süresince sağlanan haklar (her abonelik döneminde verilen çip, günlük giriş ödülünün 2 katı, masada VIP çerçeve ve benzerleri) satın alma ekranında listelenir. Abonelik sona erdiğinde haklar da sona erer; daha önce verilen çip hesabınızda kalır.</li>
+      <li>Uygulamayı silip yeniden yüklediğinizde veya cihaz değiştirdiğinizde mağazadaki "Satın alımları geri yükle" düğmesiyle aktif aboneliğinizi aynı hesaba yeniden bağlayabilirsiniz. Tüketilen çip paketleri mağaza kuralları gereği geri yüklenmez; zaten hesabınızda tanımlıdır.</li>
+      <li>VIP aboneliğinin iadesi halinde, o dönem için verilen çip bu bölümdeki iade kurallarına göre geri alınır ve VIP hakları sona erer.</li>
+    </ul>
+  </section>
+
+  <section id="tr-8"><h2 class="sec"><span>8</span>Ödüller, promosyonlar ve arkadaş daveti</h2>
+    <p>Oyunda günlük giriş ödülleri, hoş geldin ödülü, seviye ödülleri, görev ödülleri, turnuva ödülleri, aylık kupa ödülleri, etkinlikler ve arkadaş daveti ödülleri ("Ödüller") bulunabilir. Ödüller yalnızca Sanal Ürünlerden oluşur; gerçek para, mal veya hizmet karşılığı yoktur.</p>
+    <ul>
+      <li><b>Hoş geldin ödülü:</b> Yeni hesap, açıldıktan sonraki ilk 7 gün içinde oyuna girdiği her gün için bir kez <b>100.000 çip</b> alır (en fazla 7 kez, toplam 700.000 çip). İkinci günden itibaren hesabın en az 3 el oynamış olması gerekir. Bir cihazda yalnızca bir hesap hoş geldin ödülü alabilir.</li>
+      <li><b>Turnuvalar:</b> Turnuvalar ücretsizdir; katılmak için çip veya para ödenmez ve herkes kendiliğinden katılır. Turnuva süresince Masalar ve Hemen oyna masalarında kazanılan her el puan getirir (kazanma 10, okeyle bitirme +10, çifteyle bitirme +10 puan); özel masalarda oynanan eller sayılmaz. Haftalık turnuva İstanbul saatiyle pazartesi 00:00'da başlar ve pazar 24:00'te biter; aylık turnuva ayın ilk günü başlar, son günü biter. Ayrıca belirli bir süre veya salon için özel turnuvalar düzenlenebilir. Turnuva bitince en çok puan toplayan oyunculara oyunda duyurulan miktarlarda çip ödülü verilir; eşit puanlı oyuncular, paylaştıkları sıraların ödüllerini eşit olarak bölüşür. Hile, çoklu hesap veya puan aktarmak için yapılan anlaşmalı oyun tespit edilirse puanlar ve ödüller geri alınır.</li>
+      <li><b>Seviye ödülleri ve İlerleme Yolu:</b> Oynadığınız her el seviyenize sayılır. 1–20. seviyeler 8'er elde gelir ve seviye başına 500 × seviye çip verir; 21–100. seviyeler arasında gereken el sayısı 8'den 28'e kadar artar, ödül her seviyede büyür ve 100. seviyede 10.000.000 çipe ulaşır. 100. seviyeden sonra her 28 elde bir "Usta" seviyesi gelir ve her biri 1.000.000 çip verir. 25, 50, 75 ve 100. seviyelerde çipe ek olarak sırasıyla 1, 2, 3 ve 7 gün VIP verilir. Seviye ödülünü Profil ekranındaki İlerleme Yolu'ndan alırsınız; sonraki ödül ve kalan el sayısı orada gösterilir. Özel masalarda ve bilgisayara karşı oynanan eller de sayılır; kuralları dolanmak için yapılan anlaşmalı oyun tespit edilirse seviye ve ödüller geri alınır.</li>
+      <li><b>Aylık kupalar:</b> Her ay sonunda, oyunda kuralları açıklanan kupalar (ör. Puan Lideri, Çip Lideri, Zafer, Çark Ustası) ve bu kupaların çip ödülleri verilir. Kupa eşikleri ve ödülleri oyunda duyurulur. Çark Ustası kupasında sayaç, Şans Çarkı'nın çevrildiği oyuna (Klasik Okey veya 101 Okey) yazılır; günlük çevirme hakkı iki oyunda ortaktır ve iki oyundaki çevirmeler birleştirilmez. Kupalar hesaba hatıra olarak işlenir ve devredilemez.</li>
+      <li><b>Arkadaş daveti:</b> Her oyuncunun kişisel bir davet kodu vardır. Davet ettiğiniz arkadaşınız, hesabını açtıktan sonraki ilk 7 gün içinde kodunuzu bir kez girebilir ve davet hediyesi olarak hemen <b>250.000 çip</b> alır. Arkadaşınız <b>10. elini</b> bitirdiğinde size <b>1.000.000 çip</b> davet ödülü verilir; davet ödülü, davet edilen oyuncu 10 el oynamadan verilmez. Oyunun mağazalarda yayınlandığı ilk 30 gün içinde katılan arkadaşlar için bu iki ödül <b>2 kat</b> verilir (500.000 ve 2.000.000 çip).</li>
+      <li>Bir oyuncu ayda en fazla <b>10</b> davet ödülü alabilir. Kendi kodunu girmek, aynı kişiye ait veya aynı cihaz ya da internet bağlantısından açılan hesaplarla davet ödülü toplamak, davet kodlarını para veya karşılık ile alıp satmak yasaktır.</li>
+      <li>Ödüllerin hile, çoklu hesap, otomatik araç veya bir açık kullanılarak elde edildiği tespit edilirse ilgili Ödüller geri alınır ve Bölüm 12'deki yaptırımlar uygulanabilir.</li>
+      <li>Ödüllerin miktarlarını, koşullarını ve sürelerini oyun dengesi için değiştirebilir veya bir promosyonu sona erdirebiliriz; kazanılmış ve hesaba tanımlanmış Ödüller bu değişiklikten etkilenmez. Bir etkinliğe özel kurallar duyurulursa o kurallar da geçerlidir.</li>
+    </ul>
+  </section>
+
+  <section id="tr-9"><h2 class="sec"><span>9</span>Ödüllü reklamlar ve üçüncü taraf içerikler</h2>
+    <ul>
+      <li>Oyunda, izlemeyi kendiniz seçtiğiniz ödüllü reklamlar bulunur. Her reklamı sonuna kadar izlediğinizde <b>500 çip</b> kazanırsınız. Günde en fazla <b>10</b> ödüllü reklam izlenebilir ve iki reklam arasında en az <b>30 dakika</b> bulunur; bir sonraki hakkınıza kalan süre ana menüde gösterilir. Reklam, siz onay vermeden başlamaz. Günlük hak, İstanbul saatiyle her gün gece yarısı yenilenir.</li>
+      <li>Reklam yarıda kapatılırsa, yüklenemezse veya reklam engelleyici, sanal cihaz ya da otomatik araç kullanıldığı tespit edilirse ödül verilmez. Ödül miktarı ve günlük hak sayısı Bölüm 8'deki gibi değiştirilebilir.</li>
+      <li><b>Istakadaki logo:</b> Oyuncunun kendi ıstakasında Okey İstanbul logosu ya da bir sponsorun logosu görünebilir. Sponsor logosu bir tanıtımdır; sponsorun ürün ve hizmetlerinden sponsor sorumludur. Logo tıklanamaz ve size ait hiçbir veri sponsorla paylaşılmaz.</li>
+      <li>Reklamlar üçüncü taraf reklam iş ortakları tarafından gösterilir. Reklamlarda tanıtılan ürün, hizmet ve internet sitelerinin içeriğinden, güvenliğinden veya bunlarla yaptığınız işlemlerden reklam verenler sorumludur; bu işlemler Hizmet Sağlayıcıyı bağlamaz. Reklamlarla ilgili kişisel verilerin işlenmesi <a href="/gizlilik">Gizlilik Politikası</a>'nda açıklanmıştır.</li>
+      <li>Oyunda veya sitemizde Apple, Google, Facebook gibi üçüncü taraf hizmetlerine bağlantılar bulunabilir. Bu hizmetler kendi şartlarına ve gizlilik politikalarına tabidir.</li>
+    </ul>
+  </section>
+
+  <section id="tr-10"><h2 class="sec"><span>10</span>Yasak davranışlar</h2>
+    <p>Aşağıdaki davranışlar yasaktır:</p>
+    <ul>
+      <li>Hile yazılımı, bot, otomatik oynatıcı, makro veya Oyunu değiştiren üçüncü taraf programlar kullanmak;</li>
+      <li>Oyunun kodunu, iletişimini veya sunucusunu kopyalamak, çözmek, tersine mühendislik yapmak, değiştirmek veya müdahale etmek;</li>
+      <li>Başka oyuncularla anlaşarak oynamak (masada iş birliği yapmak, taşları paylaşmak, kasıtlı kaybetmek);</li>
+      <li>Başkasının hesabına izinsiz erişmek veya erişmeye çalışmak, kimlik bilgilerini ele geçirmek;</li>
+      <li>Sunucuya aşırı yük bindirmek, hizmeti engellemeye çalışmak;</li>
+      <li>Oyunu yasa dışı bir amaçla kullanmak.</li>
+    </ul>
+  </section>
+
+  <section id="tr-11"><h2 class="sec"><span>11</span>Hata ve açıkların kötüye kullanılması</h2>
+    <p>Oyunda bir hata, açık veya beklenmeyen bir davranış (örneğin çiplerin çoğalması, ödülün tekrar tekrar alınabilmesi, satın almanın ödeme yapılmadan gerçekleşmesi) fark ederseniz bunu <b>kullanmadan</b> ve <b>kimseyle paylaşmadan</b> derhal bize bildirmeniz gerekir.</p>
+    <ul>
+      <li>Bir açığı bilerek kullanmak, tekrarlamak, başkalarına öğretmek veya yaymak yasaktır.</li>
+      <li>Açık yoluyla elde edilen çip, Sanal Ürün ve diğer kazançlar, açıktan yararlanan hesaptan ve bu kazançların aktarıldığı diğer hesaplardan <b>geri alınır</b>; gerekirse hesabın durumu açıktan önceki haline döndürülür.</li>
+      <li>Açığı kasıtlı olarak kullanan hesaplar askıya alınır veya kalıcı olarak kapatılır.</li>
+      <li>İyi niyetle ve kullanmadan yapılan bildirimler yaptırıma konu olmaz; uygun görülmesi halinde bildirimi yapan kullanıcı oyun içinde ödüllendirilebilir.</li>
+    </ul>
+  </section>
+
+  <section id="tr-12"><h2 class="sec"><span>12</span>Yaptırımlar</h2>
+    <p>Bu Şartların ihlali halinde, ihlalin ağırlığına göre aşağıdaki yaptırımlardan bir veya birkaçını uygulayabiliriz:</p>
+    <ul>
+      <li>Uyarı;</li>
+      <li>Sohbet veya belirli özelliklerin kısıtlanması;</li>
+      <li>Haksız elde edilen çip ve Sanal Ürünlerin geri alınması, bakiyenin düzeltilmesi;</li>
+      <li>Hesabın geçici olarak askıya alınması;</li>
+      <li>Hesabın kalıcı olarak kapatılması ve aynı kişiye ait diğer hesapların da kapatılması;</li>
+      <li>Yeni hesap açılmasının engellenmesi.</li>
+    </ul>
+    <p>Gerçek para ile alım satım (Bölüm 6), açıkların kasıtlı olarak kullanılması (Bölüm 11), hile yazılımı kullanımı ve ödeme dolandırıcılığı <b>ağır ihlal</b> sayılır ve doğrudan kalıcı kapatma ile sonuçlanabilir. Kapatılan hesaplardaki çip ve satın alımlar iade edilmez. Bir yaptırımın hatalı olduğunu düşünüyorsanız aşağıdaki iletişim adresinden itiraz edebilirsiniz; itirazlar incelenerek yanıtlanır.</p>
+    <p><b>Otomatik koruma:</b> Oyunun herkes için düzgün çalışması amacıyla sistem; kısa sürede aşırı sayıda istek veya mesaj gönderen, otomatik program ya da bot kullanan veya masa kodlarını art arda deneyen hesapları otomatik olarak geçici süreyle kısıtlayabilir, masadan çıkarabilir veya kod girişini durdurabilir. Bu geçici önlemler kendiliğinden kalkar; tekrarlanan veya ağır ihlallerde yukarıdaki yaptırımlar uygulanır.</p>
+  </section>
+
+  <section id="tr-13"><h2 class="sec"><span>13</span>Zararın tazmini</h2>
+    <p>Bu Şartlara aykırı davranışınız, özellikle Oyundaki bir açığın kasıtlı olarak kötüye kullanılması, hile yazılımı kullanımı, sunucuya müdahale, ödeme dolandırıcılığı veya gerçek para ile alım satım nedeniyle Hizmet Sağlayıcının, diğer oyuncuların veya üçüncü kişilerin uğradığı her türlü doğrudan zararı, 6098 sayılı Türk Borçlar Kanunu ve ilgili mevzuat çerçevesinde <b>tazmin etmekle yükümlüsünüz</b>. Bu kapsamdaki zararlar; geri alınan veya iptal edilen satın almalardan doğan kayıpları, ödeme sağlayıcılarına ödenen ters ibraz ücretlerini, hizmetin yeniden düzeltilmesi için yapılan makul masrafları ve hukuki takip giderlerini içerebilir. Hizmet Sağlayıcı, bu zararlar için yasal yollara başvurma ve gerekli hallerde suç duyurusunda bulunma hakkını saklı tutar.</p>
+    <p class="note">Bu bölüm, tüketici olarak sahip olduğunuz ve kanunla tanınan hakları ortadan kaldırmaz veya sınırlamaz.</p>
+  </section>
+
+  <section id="tr-14"><h2 class="sec"><span>14</span>Kullanıcı içeriği, sohbet ve topluluk kuralları</h2>
+    <p>Masadaki sohbet ve mesajlaşmada küfür, hakaret, tehdit, taciz, ayrımcılık, cinsel içerik, spam, reklam, başkasının kişisel bilgilerini paylaşmak ve çip satışına yönelik mesajlar yasaktır. Bu kurallara uymayan mesajlar silinebilir, kullanıcı engellenebilir ve hesabı kısıtlanabilir. Rahatsız edici bir oyuncuyu oyun içinden engelleyebilir veya bize bildirebilirsiniz.</p>
+    <p><b>Kullanıcı içeriği:</b> Kullanıcı adınız, sohbet mesajlarınız ve Oyuna eklediğiniz diğer içerikler ("Kullanıcı İçeriği") sizin sorumluluğunuzdadır. Kullanıcı İçeriğinizin hukuka ve başkalarının haklarına aykırı olmadığını kabul edersiniz. Oyunun çalışması için, Kullanıcı İçeriğinizi Oyun içinde diğer oyunculara gösterme, saklama, otomatik olarak filtreleme ve kural ihlali incelemesinde kullanma hakkını bize, Oyun süresince ve ücretsiz olarak tanırsınız. Kullanıcı İçeriğini önceden denetleme yükümlülüğümüz yoktur; ancak bu Şartlara aykırı içeriği kaldırabiliriz.</p>
+    <p><b>Masa kodları ve bağlantıları:</b> Özel masa kodu ve masa bağlantısı, paylaştığınız herkesin masanıza katılmasına imkân verir; kodu yalnızca güvendiğiniz kişilerle paylaşın. Masa daveti özelliklerini başkalarını rahatsız edecek şekilde (art arda, istenmeyen davetler) kullanmak yasaktır.</p>
+  </section>
+
+  <section id="tr-15"><h2 class="sec"><span>15</span>Fikri mülkiyet ve telif hakkı bildirimleri</h2>
+    <p>Oyunun adı, logosu, görselleri, taş ve masa tasarımları, avatarları, müzik ve sesleri, yazılımı ve diğer tüm içerikleri Hizmet Sağlayıcıya veya lisans verenlerine aittir. Size yalnızca Oyunu kişisel ve ticari olmayan amaçla kullanma hakkı tanınır. İçeriklerin izinsiz kopyalanması, çoğaltılması veya dağıtılması yasaktır.</p>
+    <p><b>Telif hakkı bildirimleri:</b> Oyunda veya bir kullanıcı içeriğinde fikri mülkiyet hakkınızın ihlal edildiğini düşünüyorsanız <code>admin@okeyistanbul.com</code> adresine; adınızı ve iletişim bilgilerinizi, hakkın konusu olan eseri, ihlal olduğunu düşündüğünüz içeriğin Oyundaki yerini ve bildirimin doğru olduğuna dair beyanınızı içeren bir bildirim gönderiniz. Bildirimleri inceleyip gerekli gördüğümüz içeriği kaldırırız; ihlali tekrarlayan hesapları kapatabiliriz.</p>
+  </section>
+
+  <section id="tr-16"><h2 class="sec"><span>16</span>Güncellemeler, hizmetin değiştirilmesi ve sona ermesi</h2>
+    <p>Oyunu geliştirmek, bakımını yapmak veya yasal gereklilikleri karşılamak için Oyunun özelliklerini değiştirebilir, geçici olarak durdurabilir veya makul bir süre önceden oyun içinde duyurarak tamamen sona erdirebiliriz. Hesabınızı istediğiniz zaman oyun içinden silebilirsiniz.</p>
+    <p><b>Güncellemeler:</b> Oyunun düzgün ve güvenli çalışması için zaman zaman güncelleme yayınlarız. Bazı güncellemeler zorunlu olabilir; güncel sürümü yüklemeden Oyunun tüm özelliklerini kullanamayabilirsiniz. Güncellemeler cihazınızın işletim sisteminin belirli bir sürümünü gerektirebilir.</p>
+  </section>
+
+  <section id="tr-17"><h2 class="sec"><span>17</span>Sorumluluğun sınırları</h2>
+    <p>Oyun "olduğu gibi" sunulur. Kesintisiz veya hatasız çalışacağını garanti etmeyiz. Bağlantı sorunları, cihaz arızaları veya mağaza kaynaklı aksaklıklar nedeniyle yaşanan kayıplardan, kasıt veya ağır ihmalimiz bulunmadıkça sorumlu tutulamayız. Bu sınırlama, kanunen sınırlanamayan sorumluluklarımızı ve tüketici haklarınızı etkilemez.</p>
+  </section>
+
+  <section id="tr-18"><h2 class="sec"><span>18</span>Uygulanacak hukuk ve uyuşmazlıklar</h2>
+    <p>Bu Şartlar Türkiye Cumhuriyeti hukukuna tabidir. Tüketici sıfatıyla taraf olduğunuz uyuşmazlıklarda, 6502 sayılı Kanun uyarınca belirlenen parasal sınırlar dahilinde yerleşim yerinizdeki Tüketici Hakem Heyetleri, bu sınırları aşan durumlarda Tüketici Mahkemeleri yetkilidir.</p>
+    <p>Bir sorun yaşarsanız önce <code>admin@okeyistanbul.com</code> adresinden bize yazmanızı rica ederiz; çoğu sorunu bu yolla hızla çözebiliriz.</p>
+  </section>
+
+  <section id="tr-19"><h2 class="sec"><span>19</span>Genel hükümler</h2>
+    <ul>
+      <li><b>Bütünlük:</b> Bu Şartlar, Gizlilik Politikası ve oyun içinde duyurulan etkinlik kuralları, Oyunun kullanımına ilişkin aramızdaki anlaşmanın tamamıdır.</li>
+      <li><b>Bölünebilirlik:</b> Bir hükmün geçersiz veya uygulanamaz sayılması diğer hükümlerin geçerliliğini etkilemez; geçersiz hüküm, amacına en yakın geçerli hükümle yorumlanır.</li>
+      <li><b>Feragat sayılmama:</b> Bir hakkımızı kullanmamamız veya geç kullanmamız o haktan vazgeçtiğimiz anlamına gelmez.</li>
+      <li><b>Devir:</b> Bu Şartlardan doğan haklarınızı ve yükümlülüklerinizi başkasına devredemezsiniz. Oyunun bir şirkete veya başka bir kişiye devredilmesi halinde Şartlar, haklarınız korunarak devralan tarafından sürdürülebilir; bu durum oyun içinde duyurulur.</li>
+      <li><b>Mücbir sebep:</b> Doğal afet, salgın, savaş, kamu otoritesi kararları, geniş çaplı internet veya altyapı kesintileri, barındırma ya da mağaza hizmetlerinde bizden kaynaklanmayan arızalar gibi makul kontrolümüz dışındaki olaylardan doğan gecikme ve aksaklıklardan sorumlu tutulamayız.</li>
+      <li><b>Bildirimler:</b> Size yapılacak bildirimler oyun içi mesaj, bildirim veya bu sayfa üzerinden yapılır. Bize yapacağınız bildirimler için <code>admin@okeyistanbul.com</code> adresini kullanınız.</li>
+      <li><b>Ortaklık yoktur:</b> Oyunu kullanmanız, aramızda ortaklık, iş, temsil veya acentelik ilişkisi kurmaz.</li>
+    </ul>
+  </section>
+
+  <section id="tr-20"><h2 class="sec"><span>20</span>Değişiklikler ve iletişim</h2>
+    <p>Bu Şartları güncelleyebiliriz. Önemli değişiklikleri oyun içinde duyururuz; değişiklikten sonra Oyunu kullanmaya devam etmeniz güncel Şartları kabul ettiğiniz anlamına gelir.</p>
+    <div class="contact">
+      <p style="margin:0 0 .3rem"><b>Hizmet sağlayıcı:</b> Okey İstanbul · Türkiye</p>
+      <p style="margin:0">Destek ve açık bildirimi: <code>admin@okeyistanbul.com</code></p>
+    </div>
+  </section>
+</main>
+
+<!-- ======================= ENGLISH ======================= -->
+<main class="wrap" id="en" lang="en" hidden>
+  <div class="meta"><span>Effective date: <b>November 11, 2026</b></span><span>Version: <b>3.1</b></span><span>Provider: <b>Okey İstanbul</b></span></div>
+
+  <div class="key">
+    <h2>Summary: the most important rules</h2>
+    <ul>
+      <li><b>Okey İstanbul is for entertainment only.</b> No real money can be won in the Game and no real money or prizes of value are awarded.</li>
+      <li><b>In-game chips cannot be cashed out, bought or sold.</b> Trading chips, accounts or virtual items for real money or any other consideration is strictly prohibited.</li>
+      <li><b>If chips from a refunded purchase were already spent, the spent amount is deducted from your balance, which can go negative.</b></li>
+      <li><b>Violating these rules results in permanent account termination.</b> Chips and purchases on terminated accounts are not refunded.</li>
+      <li><b>Rewards are in-game chips only.</b> Rewarded ads: up to 10 per day, 500 chips each; collecting rewards or invite rewards with multiple accounts is prohibited.</li>
+      <li><b>At Risk (Rizikolu) tables a loss can be a multiple of the stake.</b> Up to 19× the stake in Risk 51 and 15× in Risk 101 is held in escrow during the hand; only the actual amount is paid when the hand ends and the rest is returned at once.</li>
+      <li><b>When few people are online, computer players may sit at some tables.</b> To play only with real people, create your own table or a private table in the Tables section.</li>
+      <li><b>Exploiting bugs or vulnerabilities is prohibited.</b> Gains obtained this way are removed, and resulting damages will be claimed from the user to the extent permitted by law.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Contents"><h2>Contents</h2><ol>
+    <li><a href="#en-1">Parties and acceptance</a></li>
+    <li><a href="#en-2">Age requirement, account and security</a></li>
+    <li><a href="#en-3">Licence to use the Game</a></li>
+    <li><a href="#en-4">Nature of the Game</a></li>
+    <li><a href="#en-5">Virtual chips and items</a></li>
+    <li><a href="#en-6">Real-money trading prohibited</a></li>
+    <li><a href="#en-7">Purchases, refunds and negative balance</a></li>
+    <li><a href="#en-8">Rewards, promotions and friend invites</a></li>
+    <li><a href="#en-9">Rewarded ads and third-party content</a></li>
+    <li><a href="#en-10">Prohibited conduct</a></li>
+    <li><a href="#en-11">Exploiting bugs and vulnerabilities</a></li>
+    <li><a href="#en-12">Enforcement</a></li>
+    <li><a href="#en-13">Liability for damages</a></li>
+    <li><a href="#en-14">User content, chat and community rules</a></li>
+    <li><a href="#en-15">Intellectual property and copyright notices</a></li>
+    <li><a href="#en-16">Updates, changes to and end of the service</a></li>
+    <li><a href="#en-17">Limitation of liability</a></li>
+    <li><a href="#en-18">Governing law and disputes</a></li>
+    <li><a href="#en-19">General provisions</a></li>
+    <li><a href="#en-20">Changes and contact</a></li>
+  </ol></nav>
+
+  <section id="en-1"><h2 class="sec"><span>1</span>Parties and acceptance</h2>
+    <p>These Terms of Use ("Terms") govern the relationship between <b>Okey İstanbul</b> ("Provider", "we"; contact: <code>admin@okeyistanbul.com</code>), who offers the Okey İstanbul mobile game and related services (the "Game"), and the person using the Game ("User", "you"). By downloading, creating an account in or using the Game, you accept these Terms and the <a href="/gizlilik" target="_blank" rel="noopener">Privacy Policy</a>. If you do not agree, do not use the Game.</p>
+    <p>The terms of the Apple App Store or Google Play also apply to the Game downloaded from those stores. Apple and Google are not parties to these Terms and are not responsible for supporting the Game.</p>
+  </section>
+
+  <section id="en-2"><h2 class="sec"><span>2</span>Age requirement, account and security</h2>
+    <ul>
+      <li>Only persons <b>aged 18 or over</b> may use the Game.</li>
+      <li>You are responsible for the accuracy of your account information and the security of your login. Actions taken on your account are deemed to be yours.</li>
+      <li>Accounts are personal and may not be transferred, sold, rented or shared.</li>
+      <li>One account per person. Creating multiple accounts to circumvent rules, multiply rewards or transfer chips to yourself is prohibited.</li>
+    </ul>
+    <ul>
+      <li>You can play as a guest or with your Apple, Google or Facebook account. A guest account is tied to your device and may not be recoverable if you delete the app or change devices; we recommend linking your account to Apple, Google or Facebook to keep your progress.</li>
+      <li>Tell us immediately if you notice unauthorised activity on your account. Usernames must not contain profanity, insults, impersonation or advertising; we may change such names.</li>
+    </ul>
+  </section>
+
+  <section id="en-3"><h2 class="sec"><span>3</span>Licence to use the Game</h2>
+    <p>Provided you comply with these Terms, we grant you a limited, personal, non-transferable, non-sublicensable, non-exclusive and revocable licence to use the Game on your own device for personal, non-commercial entertainment. The Game is licensed, not sold, to you; this licence gives you no ownership of the Game or its content.</p>
+    <p>The licence ends automatically if you breach these Terms, if your account is closed or if the Game is discontinued.</p>
+  </section>
+
+  <section id="en-4"><h2 class="sec"><span>4</span>Nature of the Game</h2>
+    <p>Okey İstanbul is a digital version of the traditional okey game, provided <b>for entertainment purposes only</b>. The Game:</p>
+    <ul>
+      <li>does <b>not</b> award real money, cash, gift cards, goods or any prize of value;</li>
+      <li>uses chips that have <b>no monetary value</b> in the real world, whether won or lost.</li>
+    </ul>
+    <p>Using the Game or its chips in any scheme intended to earn real money is strictly prohibited.</p>
+    <p><b>Computer players:</b> Because the Game is new, when few people are online computer players (bots) may take empty seats at <b>Quick play</b> tables and at some tables in the <b>Tables</b> section so you can start without waiting. Computer players follow the same rules as everyone else; they see only their own tiles and the tiles that are face up on the table, never other players' racks. Computer players do not take part in monthly trophies, leaderboards or tournaments and receive no prizes. If you want to play only with real people, create your own table or a private table in the <b>Tables</b> section; computer players sit at those tables only if everyone at the table accepts the <b>Start now</b> vote. Computer players are marked with a <b>“BİLGİSAYAR” (computer)</b> label next to their name at the table.</p>
+    <p><b>Game modes:</b> The Game offers Classic Okey, 101 Okey, 51 Okey, Risk 51 (Rizikolu 51) and Risk 101 (Rizikolu 101). The rules of each mode are explained on the in-game "How to play" screen. The same in-game chips are used in every mode; the account and balance are shared.</p>
+    <ul>
+      <li><b>51 Okey:</b> a two-player, single-deck table with an opening of 51 and no pairs. The stake is fixed: the loser of the hand pays the stake and the winner receives it minus a 7% table fee. Your balance must be at least 2× the stake to sit down. While waiting for an opponent you may play against the computer or invite a friend.</li>
+      <li><b>Risk 51 and Risk 101:</b> the table has a shared multiplier that starts at x1 and grows with the events explained in the Game (laying down the okey, the fake okey and tiles related to the indicator, and how the hand is finished). The multiplier is capped at <b>x19</b> in Risk 51 and <b>x15</b> in Risk 101. The loser pays <b>stake × multiplier</b>; the winner receives it minus a 7% table fee. If the deck runs out, the hand is a draw and nobody pays.</li>
+      <li><b>Escrow:</b> to sit at a Risk table your balance must be at least 19× the stake (Risk 51) or 15× the stake (Risk 101). That amount is held in escrow when the hand starts and cannot be spent during the hand; when the hand ends the actual amount is paid and the rest is returned to your account immediately.</li>
+      <li><b>Leaving during a hand:</b> at a Risk table, a player who leaves while a hand is in progress, or who disconnects and does not return in time, loses the hand and pays stake × (current multiplier + 4), up to the cap. At 51 Okey a player who leaves pays the stake. The Game shows the amount before you leave.</li>
+      <li><b>Risk tables have no computer players and no private tables;</b> matching is random. To prevent chip transfers, the number of hands the same two players can play together per day is limited.</li>
+    </ul>
+    <p><b>Table time reward:</b> At a table in the Tables section, you collect <b>20 chips</b> for every minute you wait for other players to fill the table. No time reward builds up while a hand is being played or between hands at a full table. The collected chips are credited when you play a hand to the end, up to 30 minutes' worth per hand. If you leave the table before the hand ends, the time reward collected so far is not paid.</p>
+  </section>
+
+  <section id="en-5"><h2 class="sec"><span>5</span>Virtual chips and items</h2>
+    <ul>
+      <li>Chips, avatars, gifts and other virtual content in the Game ("Virtual Items") are a personal, non-transferable, non-exclusive, revocable license to use them <b>within the Game only</b>. You do not acquire ownership of Virtual Items.</li>
+      <li>Virtual Items <b>cannot be exchanged</b> for real money, goods or services, and are not repurchased or redeemed for cash by the Provider.</li>
+      <li>We may change the in-game economy (prices, rewards, table fees, payouts) to keep the Game balanced.</li>
+      <li>Unused Virtual Items are not refunded when your account is closed or the Game ends, except where required by law.</li>
+    </ul>
+  </section>
+
+  <section id="en-6"><h2 class="sec"><span>6</span>Real-money trading prohibited</h2>
+    <p><b>Buying, selling, trading or brokering chips, accounts or any Virtual Item for real money or any other material consideration is strictly prohibited.</b> This applies to any transaction inside or outside the Game, including websites, social media, messaging apps, forums, marketplaces or in person. Examples include:</p>
+    <ul>
+      <li>deliberately losing chips to another player, "transferring" them at a table, or sending them as gifts in exchange for money;</li>
+      <li>selling, renting or buying accounts loaded with chips;</li>
+      <li>advertising chips for sale or connecting buyers and sellers;</li>
+      <li>using the Game as a tool for any scheme in which real money changes hands outside the Game.</li>
+    </ul>
+    <p>When a violation is detected, <b>all accounts involved will be permanently terminated without prior notice</b>, their chips and Virtual Items deleted, and no refunds given. Where illegal activity is suspected, relevant information may be shared with competent authorities in line with our legal obligations.</p>
+  </section>
+
+  <section id="en-7"><h2 class="sec"><span>7</span>Purchases, refunds and negative balance</h2>
+    <ul>
+      <li>Chip packs and other purchases are made only through the Apple App Store or Google Play. The store processes payment, and refunds follow that store's policy.</li>
+      <li>Virtual Items are delivered to your account immediately once the purchase is confirmed. Under Turkish Consumer Protection Law No. 6502 and the Distance Contracts Regulation, the right of withdrawal may not apply to intangible goods delivered instantly in electronic form, with your consent obtained before purchase.</li>
+      <li>If a completed purchase is reversed through an unjustified cancellation, chargeback or fraudulent payment, the related Virtual Items will be removed and the account may be suspended or terminated.</li>
+    </ul>
+    <h3 class="sub">Double chips on your first purchase and completing a purchase</h3>
+    <ul>
+      <li><b>Double chips on your first purchase:</b> On your account's first chip pack purchase, the packs marked with this offer in the Game (currently the 400K, 3.5M and 12M chip packs) are credited at <b>twice</b> the chip amount. The offer applies once per account and not to the VIP subscription; if the purchase is refunded, the bonus chips are also taken back under the refund rules. We may change or end the offer as described in Section 8.</li>
+      <li><b>Completing a purchase:</b> Chips and VIP are credited once the store has verified the purchase. If verification can't be done at that moment because of a connection or store issue, the app keeps the purchase record on your device and retries automatically; the chips are credited once it is verified. If a paid purchase hasn't reached your account within a few hours, email <code>admin@okeyistanbul.com</code> with your player ID (shown on your Profile) and the store's order number.</li>
+    </ul>
+    <h3 class="sub">Refunded purchases and negative balance</h3>
+    <p>When the Apple App Store or Google Play approves a refund for a purchase, the chips and Virtual Items credited to your account by that purchase are taken back as follows:</p>
+    <ul>
+      <li>The chips granted by the refunded pack are deducted from your chip balance.</li>
+      <li>If chips or Virtual Items obtained through the refunded purchase were <b>already used before the refund was approved</b> (spent, lost in play, gifted or used to buy other items), the chip value of the used portion is also deducted from your balance. If your balance does not cover this amount, <b>your account will go into a negative balance</b>.</li>
+      <li>Virtual Items (avatars, items, etc.) obtained through the refunded purchase that are still in your account are removed.</li>
+      <li>While your account has a negative balance, you cannot sit at paid tables, send gifts, buy items with chips or use other features that require chips. The negative balance is cleared by later rewards, game winnings and new purchases.</li>
+      <li>You will be notified in-game of the negative amount and the reason before these steps are applied. If you believe the calculation is wrong, you can appeal at the contact address below.</li>
+      <li>If refunds are found to be abused (for example, repeatedly requesting refunds after spending the purchased chips), the account may also be suspended or terminated under Section 12.</li>
+    </ul>
+    <h3 class="sub">VIP monthly subscription</h3>
+    <ul>
+      <li>VIP is a <b>monthly auto-renewing subscription</b>. The current price is shown on the purchase screen and in the relevant store. Payment is charged to your App Store or Google Play account when you confirm the purchase.</li>
+      <li>The subscription renews automatically for the same period and price <b>unless cancelled at least 24 hours before the end of the current period</b>; the renewal is charged to your store account within the 24 hours before the period ends.</li>
+      <li>You can manage and cancel your subscription at any time in your device's store account settings (App Store: Settings → Apple ID → Subscriptions; Google Play: Payments &amp; subscriptions). Cancellation takes effect at the end of the current period; no partial refund is given for the remaining part of a period, and refund requests follow the store's policy.</li>
+      <li>The benefits during VIP (chips granted each subscription period, double daily login reward, VIP frame at the table and similar) are listed on the purchase screen. Benefits end when the subscription ends; chips already granted remain in your account.</li>
+      <li>If you reinstall the app or change devices, you can relink an active subscription to the same account with the "Restore purchases" button in the store. Consumed chip packs are not restored under store rules; they are already credited to your account.</li>
+      <li>If a VIP subscription is refunded, the chips granted for that period are taken back under the refund rules in this section and VIP benefits end.</li>
+    </ul>
+  </section>
+
+  <section id="en-8"><h2 class="sec"><span>8</span>Rewards, promotions and friend invites</h2>
+    <p>The Game may offer daily login rewards, a welcome reward, level rewards, mission rewards, tournament prizes, monthly trophy prizes, events and friend-invite rewards ("Rewards"). Rewards consist only of Virtual Items and have no real-money, goods or services value.</p>
+    <ul>
+      <li><b>Welcome reward:</b> A new account receives <b>100,000 chips</b> once for each day it logs in during the first 7 days after it is created (at most 7 times, 700,000 chips in total). From the second day on, the account must have played at least 3 hands. Only one account per device can receive the welcome reward.</li>
+      <li><b>Tournaments:</b> Tournaments are free; no chips or money are paid to enter and everyone takes part automatically. During a tournament, every hand won at Tables and Quick play tables earns points (win 10, finishing with the okey +10, finishing with pairs +10); hands at private tables do not count. The weekly tournament runs from Monday 00:00 to Sunday 24:00, Istanbul time; the monthly tournament runs from the first to the last day of the month. Special tournaments may also be held for a set period or room. When a tournament ends, the players with the most points receive the chip prizes announced in the Game; players with equal points share the prizes of the places they occupy equally. If cheating, multiple accounts or collusion to transfer points is detected, points and prizes will be removed.</li>
+      <li><b>Level rewards and the Level Path:</b> every hand you play counts toward your level. Levels 1–20 take 8 hands each and give 500 × level chips; from level 21 to 100 the hands needed rise from 8 to 28 and the reward grows each level, reaching 10,000,000 chips at level 100. After level 100 a "Master" level comes every 28 hands and gives 1,000,000 chips each. At levels 25, 50, 75 and 100 you also get 1, 2, 3 and 7 days of VIP respectively. You collect level rewards from the Level Path on the Profile screen, which also shows the next reward and the hands left. Hands at private tables and against the computer also count; if collusion to get around the rules is detected, levels and rewards are taken back.</li>
+      <li><b>Monthly trophies:</b> At the end of each month, the trophies whose rules are explained in the Game (e.g. Points Leader, Chip Leader, Victory, Wheel Master) and their chip prizes are awarded. Trophy thresholds and prizes are announced in the Game. For the Wheel Master trophy, each spin counts toward the game in which the Lucky Wheel was spun (Classic Okey or 101 Okey); the daily spin allowance is shared by both games, and spins in the two games are not combined. Trophies are recorded on the account as keepsakes and cannot be transferred.</li>
+      <li><b>Friend invites:</b> Every player has a personal invite code. A friend you invite may enter your code once, within the first 7 days of creating their account, and immediately receives <b>250,000 chips</b> as an invite gift. When your friend finishes their <b>10th hand</b>, you receive a <b>1,000,000 chip</b> invite reward; the invite reward is not given before the invited player has played 10 hands. For friends who join within the first 30 days after the Game is released in the stores, both rewards are <b>doubled</b> (500,000 and 2,000,000 chips).</li>
+      <li>A player can receive at most <b>10</b> invite rewards per month. Entering your own code, collecting invite rewards with accounts that belong to you or are created from the same device or network, and buying or selling invite codes are prohibited.</li>
+      <li>Rewards obtained through cheating, multiple accounts, automation or an exploit will be removed, and the sanctions in Section 12 may apply.</li>
+      <li>We may change the amounts, conditions and timing of Rewards to keep the game balanced, or end a promotion; Rewards already credited to your account are not affected. Specific rules announced for an event also apply.</li>
+    </ul>
+  </section>
+
+  <section id="en-9"><h2 class="sec"><span>9</span>Rewarded ads and third-party content</h2>
+    <ul>
+      <li>The Game includes rewarded ads that you choose to watch. Each ad watched to the end earns <b>500 chips</b>. You can watch up to <b>10</b> rewarded ads per day, at least <b>30 minutes</b> apart; the time left until your next ad is shown in the main menu. An ad never starts without your confirmation. The daily allowance resets every day at midnight Istanbul time.</li>
+      <li>No reward is given if the ad is closed early or fails to load, or if an ad blocker, emulator or automation is detected. The reward amount and daily allowance may change as described in Section 8.</li>
+      <li><b>Logo on the rack:</b> your own rack may show the Okey İstanbul logo or a sponsor's logo. A sponsor logo is a promotion; the sponsor is responsible for its products and services. The logo is not clickable and no data about you is shared with the sponsor.</li>
+      <li>Ads are served by third-party advertising partners. Advertisers are responsible for the products, services and websites they promote and for any dealings you have with them, which do not bind the Provider. Personal data processing for ads is explained in our <a href="/gizlilik#en">Privacy Policy</a>.</li>
+      <li>The Game or our website may link to third-party services such as Apple, Google or Facebook, which are governed by their own terms and privacy policies.</li>
+    </ul>
+  </section>
+
+  <section id="en-10"><h2 class="sec"><span>10</span>Prohibited conduct</h2>
+    <p>The following are prohibited:</p>
+    <ul>
+      <li>using cheats, bots, auto-players, macros or third-party programs that modify the Game;</li>
+      <li>copying, decompiling, reverse engineering, modifying or interfering with the Game's code, traffic or servers;</li>
+      <li>colluding with other players (cooperating at a table, sharing tiles, losing on purpose);</li>
+      <li>accessing or attempting to access another person's account, or obtaining their credentials;</li>
+      <li>overloading the servers or attempting to disrupt the service;</li>
+      <li>using the Game for any unlawful purpose.</li>
+    </ul>
+  </section>
+
+  <section id="en-11"><h2 class="sec"><span>11</span>Exploiting bugs and vulnerabilities</h2>
+    <p>If you notice a bug, vulnerability or unexpected behavior (for example chips duplicating, a reward that can be claimed repeatedly, or a purchase completing without payment), you must report it to us immediately, <b>without using it</b> and <b>without sharing it</b> with anyone.</p>
+    <ul>
+      <li>Knowingly using, repeating, teaching or spreading an exploit is prohibited.</li>
+      <li>Chips, Virtual Items and other gains obtained through an exploit will be <b>removed</b> from the exploiting account and from any account they were transferred to; where necessary the account will be restored to its state before the exploit.</li>
+      <li>Accounts that knowingly exploit a vulnerability will be suspended or permanently terminated.</li>
+      <li>Reports made in good faith without using the issue are never penalized, and the reporting user may be rewarded in-game at our discretion.</li>
+    </ul>
+  </section>
+
+  <section id="en-12"><h2 class="sec"><span>12</span>Enforcement</h2>
+    <p>If you violate these Terms, depending on severity we may apply one or more of the following:</p>
+    <ul>
+      <li>a warning;</li>
+      <li>restricting chat or certain features;</li>
+      <li>removing improperly obtained chips and Virtual Items and correcting the balance;</li>
+      <li>temporary suspension of the account;</li>
+      <li>permanent termination of the account and of other accounts belonging to the same person;</li>
+      <li>blocking the creation of new accounts.</li>
+    </ul>
+    <p>Real-money trading (Section 6), knowingly exploiting vulnerabilities (Section 11), using cheats and payment fraud are <b>serious violations</b> and may lead directly to permanent termination. Chips and purchases on terminated accounts are not refunded. If you believe an action was taken in error, you can appeal at the contact address below; appeals are reviewed and answered.</p>
+    <p><b>Automatic protection:</b> To keep the Game running properly for everyone, the system may automatically and temporarily restrict, remove from the table or block code entry for accounts that send an excessive number of requests or messages in a short time, use automation or bots, or repeatedly try table codes. These temporary measures lift on their own; repeated or serious violations lead to the sanctions above.</p>
+  </section>
+
+  <section id="en-13"><h2 class="sec"><span>13</span>Liability for damages</h2>
+    <p>You are <b>liable to compensate</b>, under Turkish Code of Obligations No. 6098 and related law, any direct damage suffered by the Provider, other players or third parties as a result of your breach of these Terms, in particular the knowing exploitation of a vulnerability, use of cheats, interference with the servers, payment fraud or real-money trading. Such damages may include losses from reversed or cancelled purchases, chargeback fees paid to payment providers, reasonable costs of restoring the service and legal costs. The Provider reserves the right to pursue legal remedies for such damages and, where necessary, to file a criminal complaint.</p>
+    <p class="note">This section does not remove or limit the rights you have as a consumer under mandatory law.</p>
+  </section>
+
+  <section id="en-14"><h2 class="sec"><span>14</span>User content, chat and community rules</h2>
+    <p>Profanity, insults, threats, harassment, discrimination, sexual content, spam, advertising, sharing other people's personal information and messages offering chips for sale are prohibited in table chat and messaging. Such messages may be removed, and the user may be muted or have their account restricted. You can block a disruptive player in-game or report them to us.</p>
+    <p><b>User content:</b> You are responsible for your username, chat messages and anything else you add to the Game ("User Content"), and you confirm it does not break the law or anyone's rights. So the Game can work, you grant us a free right, for as long as the Game runs, to display your User Content to other players, store it, filter it automatically and use it when reviewing rule violations. We have no duty to review User Content in advance, but we may remove content that breaks these Terms.</p>
+    <p><b>Table codes and links:</b> A private table code or table link lets anyone you share it with join your table; share it only with people you trust. Using table invite features to bother others (repeated or unwanted invites) is prohibited.</p>
+  </section>
+
+  <section id="en-15"><h2 class="sec"><span>15</span>Intellectual property and copyright notices</h2>
+    <p>The Game's name, logo, artwork, tile and table designs, avatars, music and sounds, software and all other content belong to the Provider or its licensors. You are granted only the right to use the Game for personal, non-commercial purposes. Unauthorized copying, reproduction or distribution of the content is prohibited.</p>
+    <p><b>Copyright notices:</b> If you believe content in the Game or posted by a user infringes your intellectual property, email <code>admin@okeyistanbul.com</code> with your name and contact details, the work concerned, where the allegedly infringing content appears in the Game and a statement that your notice is accurate. We review notices, remove content where appropriate and may close the accounts of repeat infringers.</p>
+  </section>
+
+  <section id="en-16"><h2 class="sec"><span>16</span>Updates, changes to and end of the service</h2>
+    <p>To improve, maintain or comply with legal requirements, we may change features of the Game, pause it temporarily, or end it entirely after announcing this in-game reasonably in advance. You can delete your account in-game at any time.</p>
+    <p><b>Updates:</b> We release updates from time to time to keep the Game working properly and securely. Some updates may be mandatory, and without the latest version you may not be able to use all features. Updates may require a certain version of your device's operating system.</p>
+  </section>
+
+  <section id="en-17"><h2 class="sec"><span>17</span>Limitation of liability</h2>
+    <p>The Game is provided "as is". We do not guarantee that it will run uninterrupted or error-free. Unless caused by our intent or gross negligence, we are not liable for losses due to connection problems, device failures or store-related issues. This limitation does not affect liabilities that cannot be limited by law or your consumer rights.</p>
+  </section>
+
+  <section id="en-18"><h2 class="sec"><span>18</span>Governing law and disputes</h2>
+    <p>These Terms are governed by the laws of the Republic of Türkiye. For disputes in which you act as a consumer, the Consumer Arbitration Committees at your place of residence have jurisdiction within the monetary limits set under Law No. 6502, and the Consumer Courts above those limits.</p>
+    <p>If you have a problem, please contact us first at <code>admin@okeyistanbul.com</code>; we can resolve most issues quickly this way.</p>
+  </section>
+
+  <section id="en-19"><h2 class="sec"><span>19</span>General provisions</h2>
+    <ul>
+      <li><b>Entire agreement:</b> These Terms, the Privacy Policy and event rules announced in-game form the entire agreement between us about the Game.</li>
+      <li><b>Severability:</b> If a provision is held invalid or unenforceable, the rest remain in force, and the invalid provision is read as the closest valid provision.</li>
+      <li><b>No waiver:</b> Not exercising, or delaying the exercise of, a right does not mean we waive it.</li>
+      <li><b>Assignment:</b> You may not transfer your rights or obligations under these Terms. If the Game is transferred to a company or another person, the Terms may continue with the transferee with your rights preserved; we will announce this in-game.</li>
+      <li><b>Force majeure:</b> We are not liable for delays or failures caused by events beyond our reasonable control, such as natural disasters, epidemics, war, government action, widespread internet or infrastructure outages, or hosting or store failures not caused by us.</li>
+      <li><b>Notices:</b> We send notices to you through in-game messages, notifications or this page. Send notices to us at <code>admin@okeyistanbul.com</code>.</li>
+      <li><b>No partnership:</b> Using the Game creates no partnership, employment, agency or representation relationship between us.</li>
+    </ul>
+  </section>
+
+  <section id="en-20"><h2 class="sec"><span>20</span>Changes and contact</h2>
+    <p>We may update these Terms. We will announce significant changes in-game; continuing to use the Game after a change means you accept the updated Terms.</p>
+    <div class="contact">
+      <p style="margin:0 0 .3rem"><b>Provider:</b> Okey İstanbul · Türkiye</p>
+      <p style="margin:0">Support and vulnerability reports: <code>admin@okeyistanbul.com</code></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap"><span>© 2026 Okey İstanbul</span></footer>
+<script>
+(function(){
+  var tr=document.getElementById('tr'),en=document.getElementById('en'),
+      ltr=document.getElementById('lk-tr'),len=document.getElementById('lk-en'),sub=document.getElementById('sub');
+  function show(l){var isEn=l==='en';tr.hidden=isEn;en.hidden=!isEn;
+    ltr.setAttribute('aria-current',String(!isEn));len.setAttribute('aria-current',String(isEn));
+    document.documentElement.lang=isEn?'en':'tr';
+    sub.textContent=isEn?'Terms of Use and End User Agreement':'Kullanım Şartları ve Son Kullanıcı Sözleşmesi';
+    document.title=isEn?'Okey İstanbul Terms of Use':'Okey İstanbul Kullanım Şartları';}
+  function fromHash(){var h=(location.hash||'').slice(1);show(h.indexOf('en')===0?'en':'tr')}
+  ltr.addEventListener('click',function(e){e.preventDefault();show('tr');window.scrollTo(0,0)});
+  len.addEventListener('click',function(e){e.preventDefault();show('en');window.scrollTo(0,0)});
+  window.addEventListener('hashchange',fromHash);fromHash();
+})();
+</script>
+
+<a class="sitehome" href="/">← okeyistanbul.com</a>
+<style>.sitehome{position:fixed;left:16px;bottom:16px;z-index:50;background:#7a1426;color:#fff4dc;text-decoration:none;font:500 14px Rubik,Arial,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.18)}.sitehome:hover{background:#5a0f1c}@media print{.sitehome{display:none}}</style>
+</body>
+</html>

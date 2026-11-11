@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Okey İstanbul</title>
+<meta name="description" content="Okey İstanbul: Klasik Okey, 101 Okey, 51 Okey, Rizikolu 51 ve Rizikolu 101 tek uygulamada, ücretsiz. Manzaralı masalar, büyüteç, yazboz, sohbet, ikramlar, masaları izleme, kupalar ve şans çarkı.">
+<meta property="og:title" content="Okey İstanbul">
+<meta property="og:description" content="Okeyin kalbi İstanbul'da atar! Beş oyun tek uygulamada: Klasik Okey, 101 Okey, 51 Okey, Rizikolu 51 ve Rizikolu 101.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://okeyistanbul.com/img/og.jpg">
+<meta property="og:url" content="https://okeyistanbul.com/">
+<meta name="theme-color" content="#170609">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
+<style>
+/* Okey İstanbul — gece bordosu bir İstanbul akşamı; altın yaldız, çuha yeşili. Her bölüm oyundan gerçek bir ekranla. */
+:root{
+  --night:#170609;--night2:#210910;--bordo:#5a0f1e;--bordo2:#7d1a2c;--navy:#141a3a;
+  --gold:#e2b862;--gold-hi:#f7dfa3;--gold-lo:#a8741a;--cream:#f6ead6;--muted:#c9ab9a;--felt:#1d6b51;
+  --line:rgba(226,184,98,.24);--card:rgba(255,236,200,.04);
+  --display:'Cinzel',Georgia,'Times New Roman',serif;--body:'Rubik',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--cream);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.wrap{max-width:74rem;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h2{font:700 clamp(1.7rem,4.2vw,2.6rem)/1.12 var(--display);letter-spacing:.02em;margin:0 0 .9rem;color:var(--gold-hi);text-wrap:balance}
+h3{font:700 1.15rem/1.3 var(--display);letter-spacing:.03em;margin:0 0 .35rem;color:var(--gold-hi)}
+.eyebrow{font:600 .78rem var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .7rem}
+.intro{color:var(--muted);max-width:40rem;margin:0 0 1.4rem}
+section{padding-block:clamp(3.5rem,8vw,6rem);border-top:1px solid rgba(226,184,98,.08)}
+
+/* üst şerit */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1rem}
+.mark{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--gold-hi);font:700 1rem var(--display);letter-spacing:.12em;white-space:nowrap}
+.mark img{width:40px;height:40px}
+.top nav{display:flex;gap:1.3rem;font-size:.92rem;flex-wrap:wrap;justify-content:flex-end}
+.top nav a{color:var(--cream);text-decoration:none;opacity:.88;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.top nav a:hover{opacity:1;color:var(--gold-hi)}
+@media (max-width:760px){.top nav{display:none}}
+
+/* sahne */
+.hero{position:relative;min-height:clamp(34rem,90vh,54rem);display:grid;align-items:end;overflow:hidden;isolation:isolate;border-top:0;padding:0}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(23,6,9,.6) 0%,rgba(23,6,9,0) 20%,rgba(23,6,9,0) 42%,rgba(23,6,9,.9) 78%,var(--night) 100%),
+  linear-gradient(90deg,rgba(23,6,9,.8) 0%,rgba(23,6,9,.35) 42%,rgba(23,6,9,0) 66%)}
+.hero .wrap{padding-block:7rem 2.6rem;width:100%}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font:500 .8rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin:0 0 1rem}
+.kicker i{width:.5rem;height:.5rem;border-radius:50%;background:#58d39a;box-shadow:0 0 0 4px rgba(88,211,154,.2)}
+.brand{font:700 clamp(2.8rem,9.5vw,6rem)/.92 var(--display);letter-spacing:.06em;margin:0;
+  background:linear-gradient(180deg,#fff3c4 0%,#e9bf4f 55%,#a8741a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 rgba(60,12,20,.9)) drop-shadow(0 10px 24px rgba(0,0,0,.6))}
+.brand span{display:block;font-size:.6em;letter-spacing:.32em;margin-top:.12em}
+.slogan{font:700 clamp(.9rem,2.4vw,1.15rem) var(--display);letter-spacing:.16em;margin:1rem 0 0;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.lead{max-width:34rem;margin:1rem 0 1.6rem;color:var(--cream);text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;font:700 .95rem var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn.g{background:linear-gradient(#fff0a8,#f4c542 55%,#c98512);color:#3a2204;box-shadow:0 3px 0 #7a4b0e,0 10px 24px rgba(0,0,0,.4)}
+.btn.o{background:rgba(23,6,9,.55);color:var(--gold-hi);box-shadow:inset 0 0 0 1.5px var(--gold)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.8rem;font-size:.9rem;color:var(--muted)}
+.facts b{color:var(--gold-hi);font-weight:600}
+
+/* ekran çerçevesi (yatay telefon) */
+.phone{position:relative;margin:0;padding:clamp(7px,1.1vw,13px);border-radius:clamp(22px,3vw,38px);background:linear-gradient(145deg,#2b1016,#0d0406);box-shadow:0 0 0 1px rgba(226,184,98,.35),0 24px 60px rgba(0,0,0,.6)}
+.phone img{border-radius:clamp(14px,2vw,26px);aspect-ratio:1920/886;object-fit:cover;width:100%}
+.phone::before{content:"";position:absolute;left:clamp(3px,.5vw,6px);top:50%;width:clamp(3px,.4vw,5px);height:14%;transform:translateY(-50%);border-radius:4px;background:#05010a}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.7rem;text-align:center}
+
+/* iki sütun */
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+.duo.rev{grid-template-columns:1fr 1.25fr}
+.duo.rev>figure,.duo.rev>.shots{order:2}
+.duo>*{min-width:0}
+@media (max-width:860px){.duo,.duo.rev{grid-template-columns:1fr}.duo.rev>figure,.duo.rev>.shots{order:0}}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:.65rem}
+.ticks li{position:relative;padding-left:1.6rem;color:var(--cream)}
+.ticks li::before{content:"";position:absolute;left:0;top:.55em;width:.6rem;height:.6rem;transform:rotate(45deg);background:linear-gradient(135deg,#fff0a8,#c98512);border-radius:2px}
+.ticks b{color:var(--gold-hi);font-weight:600}
+
+/* beş oyun */
+.games{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(.7rem,1.6vw,1.2rem);margin-top:2rem}
+@media (max-width:980px){.games{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.games{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.game{display:flex;flex-direction:column;gap:.6rem;text-decoration:none;color:inherit}
+.game img{border-radius:14px;box-shadow:0 0 0 1px rgba(226,184,98,.35),0 14px 30px rgba(0,0,0,.5);transition:transform .25s}
+.game:hover img{transform:translateY(-4px)}
+.game b{font:700 1rem var(--display);color:var(--gold-hi);letter-spacing:.03em}
+.game span{font-size:.86rem;color:var(--muted);line-height:1.45}
+
+/* sekmeler */
+.tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1rem}
+.tab{border:0;border-radius:999px;padding:.5rem 1rem;font:600 .88rem var(--body);background:rgba(255,236,200,.06);color:var(--cream);cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.tab[aria-selected=true]{background:linear-gradient(#fff0a8,#f4c542 55%,#c98512);color:#3a2204;box-shadow:none}
+.panes figure{margin:0}
+
+/* kart ızgarası */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.4vw,1.8rem);margin-top:2rem}
+@media (max-width:900px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:20px;padding:1rem 1rem 1.3rem;box-shadow:inset 0 0 0 1px var(--line)}
+.card .phone{margin-bottom:1rem;padding:6px;border-radius:18px}
+.card .phone img{border-radius:12px}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+
+/* rizikolu */
+.riz{background:radial-gradient(ellipse 80% 70% at 70% 40%,rgba(125,26,44,.55),transparent 70%),var(--night)}
+.mult{display:flex;align-items:baseline;gap:.4rem;font:700 clamp(2.4rem,6vw,3.6rem)/1 var(--display);color:var(--gold-hi);margin:.4rem 0 1rem}
+.mult small{font:500 1rem var(--body);color:var(--muted)}
+
+/* tanıtım */
+.yt{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(226,184,98,.4),0 24px 60px rgba(0,0,0,.6);background:#000;aspect-ratio:16/9}
+.yt img,.yt video{width:100%;height:100%;object-fit:cover;display:block}
+.yt-play{position:absolute;inset:0;display:grid;place-items:center;border:0;background:linear-gradient(0deg,rgba(23,6,9,.5),rgba(23,6,9,.1));cursor:pointer}
+.yt-play i{width:clamp(64px,9vw,92px);height:clamp(64px,9vw,92px);border-radius:50%;display:grid;place-items:center;background:linear-gradient(#fff0a8,#f4c542 55%,#c98512);box-shadow:0 0 0 8px rgba(247,223,163,.18),0 14px 30px rgba(0,0,0,.5)}
+.yt-play i::after{content:"";margin-left:8%;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #3a2204}
+.yt-note{font-size:.85rem;color:var(--muted);margin:.8rem 0 0;text-align:center}
+
+/* VIP */
+.vip .perks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem 1.4rem;list-style:none;padding:0;margin:1.2rem 0 0}
+@media (max-width:520px){.vip .perks{grid-template-columns:1fr}}
+.vip .perks li{display:flex;gap:.7rem;align-items:center}
+.vip .perks i{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;font:700 .85rem var(--body);font-style:normal;color:#3a2204;background:linear-gradient(#fff0a8,#f4c542 55%,#c98512)}
+
+/* avatarlar */
+.avs{display:flex;gap:.9rem;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);margin-top:1.6rem}
+.avs .row{display:flex;gap:.9rem;animation:kay 60s linear infinite;flex:none}
+.avs img{width:96px;height:96px;border-radius:20px;box-shadow:0 0 0 1px rgba(226,184,98,.4)}
+@keyframes kay{to{transform:translateX(calc(-100% - .9rem))}}
+@media (prefers-reduced-motion:reduce){.avs .row{animation:none}.game img{transition:none}}
+
+/* iletişim */
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;padding:1.4rem;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);max-width:36rem}
+.contact code{font:600 1.15rem var(--body);color:var(--gold-hi);user-select:all;word-break:break-all}
+.copy{border:0;border-radius:999px;padding:.45rem .95rem;font:600 .85rem var(--body);cursor:pointer;background:rgba(255,236,200,.08);color:var(--cream);box-shadow:inset 0 0 0 1px var(--line)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.2rem;font-size:.95rem}
+
+footer{border-top:1px solid var(--line);padding-block:2rem calc(2rem + env(safe-area-inset-bottom,0px));font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem}
+footer nav a{color:var(--cream);text-decoration:none}
+footer p{flex-basis:100%;margin:0;font-size:.8rem}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/"><img src="/cip.png" alt="" width="40" height="40">OKEY İSTANBUL</a>
+    <nav aria-label="Bölümler"><a href="#tanitim">Tanıtım</a><a href="#oyunlar">Oyunlar</a><a href="#masada">Masada</a><a href="#ilerleme">Ödüller</a><a href="#vip">VIP</a><a href="#iletisim">İletişim</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Okey İstanbul">
+    <img src="img/hero.webp" alt="Boğaz kıyısında bir masada okey oynayan arkadaşlar; arkada vapur ve İstanbul silueti" width="1672" height="941" fetchpriority="high">
+    <div class="wrap">
+      <p class="kicker"><i aria-hidden="true"></i>Ücretsiz · iPhone ve Android'de çok yakında</p>
+      <h1 class="brand">OKEY<span>İSTANBUL</span></h1>
+      <p class="slogan">Okeyin kalbi İstanbul'da atar</p>
+      <p class="lead">Klasik Okey, 101 Okey, 51 Okey, Rizikolu 51 ve Rizikolu 101 tek uygulamada. Boğaz manzaralı masalar, gerçek oyuncular, sohbet ve ikramlar.</p>
+      <div class="ctas"><a class="btn g" href="#tanitim">▶ Tanıtımı izle</a><a class="btn o" href="#oyunlar">Beş oyunu gör</a></div>
+      <div class="facts"><span><b>5</b> oyun</span><span><b>2</b> ve <b>4</b> kişilik masalar</span><span><b>10</b> salon</span><span>Her ay <b>kupa</b> yarışı</span></div>
+    </div>
+  </section>
+
+  <section id="tanitim">
+    <div class="wrap">
+      <p class="eyebrow">Tanıtım filmi</p>
+      <h2>Masaya oturmadan önce bir göz at</h2>
+      <p class="intro">Menüden masaya, 101'den Rizikolu'ya oyunun bugünkü hâli: büyüteç, yazboz, son perle bitiş, masaları izleme, sohbet, kupalar ve şans çarkı.</p>
+      <div class="yt" id="yt" data-yt="UivKjhIo5Uc">
+        <img src="img/tanitim.webp" alt="" width="1920" height="1080" loading="lazy">
+        <button class="yt-play" type="button" aria-label="Tanıtım filmini oynat"><i></i></button>
+      </div>
+      <p class="yt-note">2 dakika 33 saniye · oynat'a dokunduğunda YouTube'dan yüklenir · <a href="https://youtu.be/UivKjhIo5Uc" target="_blank" rel="noopener">YouTube'da izle</a></p>
+    </div>
+  </section>
+
+  <section id="oyunlar">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="phone"><img src="img/v4/menu.webp" alt="Ana menü: Boğaz manzaralı döner platformda beş oyunun kartı" width="1920" height="886" loading="lazy"></figure>
+        <div>
+          <p class="eyebrow">Tek hesap, beş oyun</p>
+          <h2>Hangi okeyi seversen, masası burada</h2>
+          <p class="intro">Döner menüden oyununu seç. Çipin, seviyen, kupaların ve arkadaşların bütün oyunlarda ortak.</p>
+        </div>
+      </div>
+      <div class="games">
+        <a class="game" href="#klasik"><img src="img/v4/k-klasik.webp" alt="" width="528" height="479" loading="lazy"><b>Klasik Okey</b><span>Taşını at, çanağı kır. Çifte git, okeyle bit.</span></a>
+        <a class="game" href="#yuzbir"><img src="img/v4/k-101.webp" alt="" width="528" height="479" loading="lazy"><b>101 Okey</b><span>Yüz biri aç, masaya hükmet. Seri ya da çift açılış, yazboz.</span></a>
+        <a class="game" href="#elli"><img src="img/v4/k-51.webp" alt="" width="528" height="479" loading="lazy"><b>51 Okey</b><span>Açılış 51. İki ya da dört kişilik masalar.</span></a>
+        <a class="game" href="#rizikolu"><img src="img/v4/k-riz51.webp" alt="" width="528" height="479" loading="lazy"><b>Rizikolu 51</b><span>İki kişilik, tek deste. Çarpan x19'a kadar büyür.</span></a>
+        <a class="game" href="#rizikolu"><img src="img/v4/k-riz101.webp" alt="" width="528" height="479" loading="lazy"><b>Rizikolu 101</b><span>Dört kişilik, 101 kuralları. Çarpan x15'e kadar.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="klasik">
+    <div class="wrap duo rev">
+      <div class="shots">
+        <figure class="phone"><img src="img/v4/kplay.webp" alt="Klasik Okey masası: Boğaz Köprüsü önünde yeşil çuha, ıstakada dizilmiş taşlar" width="1920" height="886" loading="lazy"></figure>
+      </div>
+      <div>
+        <p class="eyebrow">Klasik Okey</p>
+        <h2>Bildiğin okey, mahalle kahvesindeki kurallarla</h2>
+        <p class="intro">Meydan'dan Saray'a on salon; 2 ve 4 kişilik, normal ya da hızlı masalar. Hemen oyna'ya dokun, saniyeler içinde masadasın.</p>
+        <ul class="ticks">
+          <li><b>Seri Diz / Çift Diz</b> ile tek dokunuşta dizilen ıstaka</li>
+          <li><b>Çifte git</b>, okeyle bit, <b>çanağı kır</b></li>
+          <li>Arkadaşlarınla <b>özel masa</b>, kodla katıl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:2.4rem">
+      <figure style="margin:0"><div class="phone"><img src="img/v4/kmasa.webp" alt="Klasik Okey masalar ekranı: salon çarkı ve açık masalar" width="1920" height="886" loading="lazy"></div><figcaption>Salonunu seç, masana otur</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="yuzbir">
+    <div class="wrap">
+      <p class="eyebrow">101 Okey</p>
+      <h2>Elini diz, yüz biri aç</h2>
+      <p class="intro">Seri ya da çiftle aç, perlere işle, okeyi al. Katlamalı ya da katlamasız, tekli ya da eşli masalar.</p>
+      <div class="tabs" role="tablist" aria-label="101 Okey ekranları">
+        <button class="tab" role="tab" id="t-ac" aria-controls="p-ac">Seri aç</button>
+        <button class="tab" role="tab" id="t-lens" aria-controls="p-lens">Büyüteç</button>
+        <button class="tab" role="tab" id="t-yz" aria-controls="p-yz">Yazboz</button>
+        <button class="tab" role="tab" id="t-renk" aria-controls="p-renk">Masa rengi</button>
+      </div>
+      <div class="panes">
+        <figure id="p-ac" role="tabpanel" aria-labelledby="t-ac"><div class="phone"><img src="img/v4/open.webp" alt="101 masası: ıstakada dizilmiş perler, Seri Aç düğmesi" width="1920" height="886" loading="lazy"></div><figcaption>Tek dokunuşla diz, seriyi aç, taşını at</figcaption></figure>
+        <figure id="p-lens" role="tabpanel" aria-labelledby="t-lens" hidden><div class="phone"><img src="img/v4/lens.webp" alt="Kalabalık masada taş sürüklenirken açılan büyüteç" width="1920" height="886" loading="lazy"></div><figcaption>Taşı sürükle, işleyeceğin yer büyüteçte görünsün</figcaption></figure>
+        <figure id="p-yz" role="tabpanel" aria-labelledby="t-yz" hidden><div class="phone"><img src="img/v4/finish.webp" alt="El sonu: yazboz defterinde puanlar" width="1920" height="886" loading="lazy"></div><figcaption>Her el yazboz defterine yazılır</figcaption></figure>
+        <figure id="p-renk" role="tabpanel" aria-labelledby="t-renk" hidden><div class="phone"><img src="img/v4/felt_lacivert.webp" alt="Lacivert 101 masası" width="1920" height="886" loading="lazy"></div><figcaption>Bordo, lacivert, yeşil, bakır ya da mavi: masanın rengi senden</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="elli">
+    <div class="wrap duo">
+      <figure class="phone"><img src="img/v4/sonper.webp" alt="51 Okey: son perini açan oyuncu eli bitirdi, yazboz defteri" width="1920" height="886" loading="lazy"></figure>
+      <div>
+        <p class="eyebrow">51 Okey</p>
+        <h2>Son perini aç, eli bitir</h2>
+        <p class="intro">Açılış 51, çift yok. İki ya da dört kişilik masalar, katlamalı ya da katlamasız.</p>
+        <ul class="ticks">
+          <li>Son perini açan ya da son taşını işleyen <b>taş atmadan biter</b></li>
+          <li>Hiç açmadan elin tamamını açmak <b>elden bitiş</b>: iki kat</li>
+          <li>Okeyle bitiş iki kat, okeyle elden dört kat</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="rizikolu" class="riz">
+    <div class="wrap duo rev">
+      <div class="shots">
+        <figure class="phone"><img src="img/v4/rsalon.webp" alt="Rizikolu 51 salonu: masa ücretleri, katlamalı ve katlamasız seçimi" width="1920" height="886" loading="lazy"></figure>
+      </div>
+      <div>
+        <p class="eyebrow">Rizikolu 51 · Rizikolu 101</p>
+        <h2>Her okey çarpanı büyütür</h2>
+        <div class="mult">x1 → x19 <small>Rizikolu 51</small></div>
+        <p class="intro">Masa x1 ile başlar; okey, sahte okey ve göstergeyle ilgili taşlar açıldıkça çarpan büyür. Kaybeden masa ücreti × çarpan öder. Rizikolu 101'de dört kişi, çarpan x15'e kadar.</p>
+        <ul class="ticks">
+          <li>Beş salon, katlamalı ya da katlamasız</li>
+          <li>Masaya oturunca ücretin katları el süresince emanette, el bitince kalanı geri döner</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:2.4rem">
+      <figure style="margin:0"><div class="phone"><img src="img/v4/rplay101.webp" alt="Rizikolu 101 masası: çarpan göstergesi ve açılmış perler" width="1920" height="886" loading="lazy"></div><figcaption>Açılış yarışı, katlanan çarpan</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="manzara">
+    <div class="wrap">
+      <p class="eyebrow">Manzara senden</p>
+      <h2>İstanbul'un en güzel masaları</h2>
+      <div class="tabs" role="tablist" aria-label="Masa manzaraları">
+        <button class="tab" role="tab" id="t-bogaz" aria-controls="p-bogaz">Boğaz</button>
+        <button class="tab" role="tab" id="t-kahve" aria-controls="p-kahve">Köy kahvesi</button>
+        <button class="tab" role="tab" id="t-saray" aria-controls="p-saray">Saray odası</button>
+        <button class="tab" role="tab" id="t-sade" aria-controls="p-sade">Sade masa</button>
+      </div>
+      <div class="panes">
+        <figure id="p-bogaz" role="tabpanel" aria-labelledby="t-bogaz"><div class="phone"><img src="img/v4/kamb_bogaz.webp" alt="Boğaz Köprüsü önünde yeşil çuhalı masa" width="1920" height="886" loading="lazy"></div></figure>
+        <figure id="p-kahve" role="tabpanel" aria-labelledby="t-kahve" hidden><div class="phone"><img src="img/v4/kamb_kahve.webp" alt="Köy kahvesinde ahşap masa" width="1920" height="886" loading="lazy"></div></figure>
+        <figure id="p-saray" role="tabpanel" aria-labelledby="t-saray" hidden><div class="phone"><img src="img/v4/kamb_saray.webp" alt="Gece Boğaz manzaralı saray odasında masa" width="1920" height="886" loading="lazy"></div></figure>
+        <figure id="p-sade" role="tabpanel" aria-labelledby="t-sade" hidden><div class="phone"><img src="img/v4/kamb_kons.webp" alt="Sade yeşil çuha masa" width="1920" height="886" loading="lazy"></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="masada">
+    <div class="wrap">
+      <p class="eyebrow">Okey yalnız oynanmaz</p>
+      <h2>Masada muhabbet, menüde dostluk</h2>
+      <div class="grid3">
+        <div class="card"><figure class="phone"><img src="img/v4/gift.webp" alt="İkram penceresi: çay, Türk kahvesi, simit ve diğer ikramlar" width="1920" height="886" loading="lazy"></figure><h3>Sohbet ve ikram</h3><p>Hazır mesajlar, emojiler, VIP çıkartmaları. Çay ısmarla, altın vapur gönder.</p></div>
+        <div class="card"><figure class="phone"><img src="img/v4/gchat.webp" alt="Genel sohbet penceresi" width="1920" height="886" loading="lazy"></figure><h3>Genel sohbet</h3><p>Ana menüden herkesle selamlaş. Küfür filtresi ve şikâyet her zaman açık.</p></div>
+        <div class="card"><figure class="phone"><img src="img/v4/izle.webp" alt="Masaları izle penceresi" width="1920" height="886" loading="lazy"></figure><h3>Masaları izle</h3><p>Eli süren masalara izleyici olarak gir; yer açılınca otur.</p></div>
+      </div>
+      <div class="duo rev" style="margin-top:3rem">
+        <figure class="phone"><img src="img/v4/friends.webp" alt="Arkadaşlar ekranı: çevrimiçi arkadaşlar ve Çağır düğmeleri" width="1920" height="886" loading="lazy"></figure>
+        <div>
+          <p class="eyebrow">Arkadaşlar</p>
+          <h3 style="font-size:1.5rem">Arkadaşını masaya çağır</h3>
+          <p class="intro">Adla ara ya da arkadaş koduyla ekle. Çevrimiçi olanları gör, tek dokunuşla masana çağır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ilerleme">
+    <div class="wrap">
+      <p class="eyebrow">Oynadıkça kazan</p>
+      <h2>Seviye atla, kupanı al, çarkı çevir</h2>
+      <div class="grid3">
+        <div class="card"><figure class="phone"><img src="img/v4/lvyol.webp" alt="İlerleme yolu: seviyeler ve ödüller" width="1920" height="886" loading="lazy"></figure><h3>İlerleme yolu</h3><p>Her seviyede çip ödülü; kilometre taşlarında VIP günleri. 10 milyona kadar uzanan yol.</p></div>
+        <div class="card"><figure class="phone"><img src="img/v4/kupa.webp" alt="Kupa dolabı" width="1920" height="886" loading="lazy"></figure><h3>Aylık kupalar</h3><p>Puan lideri, maç maratonu, sadakat… Her ay altın, gümüş ve bronz kupa yarışı.</p></div>
+        <div class="card"><figure class="phone"><img src="img/v4/cark.webp" alt="Şans çarkı" width="1920" height="886" loading="lazy"></figure><h3>Şans çarkı</h3><p>Her gün çevir; ödülün 10 katına kadar kazanma şansı.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vip" class="vip">
+    <div class="wrap duo">
+      <figure class="phone"><img src="img/v4/kvip.webp" alt="Masada taçlı VIP çerçeveli oyuncular" width="1920" height="886" loading="lazy"></figure>
+      <div>
+        <p class="eyebrow">VIP üyelik</p>
+        <h2>Masada taç senin başında</h2>
+        <p class="intro">Aylık abonelik; istediğin zaman App Store ya da Google Play'den iptal edebilirsin.</p>
+        <ul class="perks">
+          <li><i>10M</i>Her ay 10.000.000 çip</li>
+          <li><i>×2</i>Günlük giriş ödülü 2 kat</li>
+          <li><i>×2</i>İlerleme yolu ödülleri 2 kat</li>
+          <li><i>♛</i>Masada özel VIP çerçeve</li>
+          <li><i>☺</i>VIP'e özel emojiler</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="avatarlar">
+    <div class="wrap">
+      <p class="eyebrow">Masada kim olacaksın?</p>
+      <h2>Kendine bir avatar seç</h2>
+      <div class="avs" aria-hidden="true">
+        <div class="row"><img src="img/avt1.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt2.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt3.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt4.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt5.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt6.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt7.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt8.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt9.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt10.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt11.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt12.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt13.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt14.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt15.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt16.webp" alt="" width="96" height="96" loading="lazy"></div>
+        <div class="row"><img src="img/avt1.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt2.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt3.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt4.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt5.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt6.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt7.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt8.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt9.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt10.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt11.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt12.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt13.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt14.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt15.webp" alt="" width="96" height="96" loading="lazy"><img src="img/avt16.webp" alt="" width="96" height="96" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <div class="wrap">
+      <p class="eyebrow">Destek ve öneriler</p>
+      <h2>Bize yaz</h2>
+      <p class="intro">Bir hata fark edersen, önerin varsa ya da hesabınla ilgili bir isteğin olursa yaz; en kısa sürede dönelim.</p>
+      <div class="contact"><code id="mail">admin@okeyistanbul.com</code><button class="copy" type="button" id="copy">Kopyala</button></div>
+      <div class="links"><a href="/gizlilik">Gizlilik Politikası</a><a href="/sartlar">Kullanım Şartları</a><a href="/hesap-sil/">Hesap silme</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Okey İstanbul</span>
+    <nav aria-label="Yasal"><a href="/gizlilik">Gizlilik Politikası</a><a href="/sartlar">Kullanım Şartları</a><a href="/gizlilik#en">Privacy Policy</a><a href="/sartlar#en">Terms of Use</a></nav>
+    <p>Okey İstanbul bir eğlence oyunudur. Oyundaki çipler yalnızca oyun içinde kullanılır; gerçek para karşılığı yoktur, nakde çevrilemez ve oyuncular arasında satılamaz.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  [].forEach.call(document.querySelectorAll('[role=tablist]'),function(L){var tabs=[].slice.call(L.querySelectorAll('.tab'));
+  function pick(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){pick(t)});t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d)return;var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();pick(n)})});
+  pick(tabs[0])});
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){var t=document.getElementById('mail').textContent;
+    function ok(){b.textContent='Kopyalandı';setTimeout(function(){b.textContent='Kopyala'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}});
+  var y=document.getElementById('yt');
+  if(y){y.querySelector('.yt-play').addEventListener('click',function(){var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+y.getAttribute('data-yt')+'?autoplay=1&rel=0&playsinline=1';f.title='Okey İstanbul tanıtım filmi';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';
+    y.innerHTML='';y.appendChild(f)})}
+})();
+</script>
+</body>
+</html>

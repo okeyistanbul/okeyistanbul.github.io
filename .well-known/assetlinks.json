@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.okeyistanbul.app",
+      "sha256_cert_fingerprints": [
+        "0F:A6:8F:6F:F1:BF:7B:5E:76:53:10:0C:52:1B:A9:34:D3:C5:EE:6B:FA:1B:80:D3:79:A9:DD:2D:C6:48:5F:51"
+      ]
+    }
+  }
+]
